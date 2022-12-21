@@ -1,0 +1,30 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables';
+
+.header {
+    background-color: variables.$background-color;
+    font-size: variables.$font-size-header;
+    .containeer {
+        @include containeer();
+    }
+    .header-block {
+        .header-block__h1 {
+            display: none;
+        }
+        display: flex;
+        justify-content: space-between;
+        .logo {
+            margin-left: 0;
+            display: flex;
+            justify-content: flex-start;
+        }
+        .navigation {
+            width: 30%;
+            margin-right: 0;
+            .navigation__elements {
+                display: flex;
+                justify-content: space-between;
+            }
+        }
+    }
+}
