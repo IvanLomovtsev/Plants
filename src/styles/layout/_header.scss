@@ -4,6 +4,7 @@
 .header {
     background-color: variables.$background-color;
     font-size: variables.$font-size-header;
+    color: variables.$font-color-header;
     .containeer {
         @include containeer();
     }
@@ -17,13 +18,22 @@
             margin-left: 0;
             display: flex;
             justify-content: flex-start;
+            .logo__img {
+                padding-bottom: variables.$padding-logo-img;
+            }
         }
         .navigation {
-            width: 30%;
+            width: variables.$navigation-width;
             margin-right: 0;
             .navigation__elements {
                 display: flex;
                 justify-content: space-between;
+                .navigation__elements-li {
+                    margin: variables.$margin-header 0;
+                    a {
+                        color: variables.$font-color-header;
+                    }
+                }
             }
         }
     }

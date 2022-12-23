@@ -4,4 +4,7 @@ html {
     scroll-behavior: smooth;
     font-family: Inika;
     color: variables.$font-color;
+    body {
+        width: variables.$body-width;
+    }
 }
