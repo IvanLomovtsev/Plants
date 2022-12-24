@@ -12,47 +12,47 @@
             justify-content: space-between;
             align-items: center;
             padding: variables.$padding-welcome 0;
-        .welcome__picture {
-            width: 448.8px;    
-            height: 409.76px;
-            margin: 0;
-            background-image: url("../images/leafs.png");
-            background-size: cover;
-        }
-        .welcome__description {
-            margin: 0;
-            width: 45%;
-            font-family: Inter;
-            .welcome__description-h2 {
-                font-size: variables.$font-size-welcome-h2;
-                font-weight: 700;
-                letter-spacing: 0.8px;
-                .green-word {
-                    color: variables.$font-color-green-word;
-                }
-            }
-            .welcome__description-p {
-                width: 95%;
+            .welcome__picture {
+                width: 448.8px;    
+                height: 409.76px;
                 margin: 0;
-                font-size: variables.$font-size-welcome-p;
-                line-height: variables.$line-height-welcome-p;
-                padding: variables.$padding-welcome-p 0;
-                
+                background-image: url("../images/leafs.png");
+                background-size: cover;
             }
-            .button {
-                margin-top: variables.$button-margin-top;
-                .button-learn {
+            .welcome__description {
+                margin: 0;
+                width: 45%;
+                font-family: Inter;
+                .welcome__description-h2 {
+                    font-size: variables.$font-size-welcome-h2;
+                    font-weight: 700;
+                    letter-spacing: 0.8px;
+                    .green-word {
+                        color: variables.$font-color-green-word;
+                    }
+                }
+                .welcome__description-p {
+                    width: 95%;
                     margin: 0;
-                    font-size: variables.$button-font-size;
-                    width: variables.$button-width;
-                    text-transform: uppercase;
-                    text-align: center;
-                    padding: variables.$button-padding 0;
-                    border: 2px solid variables.$button-border-color;
-                    border-radius: variables.$button-border-radius;
+                    font-size: variables.$font-size-welcome-p;
+                    line-height: variables.$line-height-welcome-p;
+                    padding: variables.$padding-welcome-p 0;
+                    
+                }
+                .button {
+                    margin-top: variables.$button-margin-top;
+                    .button-learn {
+                        margin: 0;
+                        font-size: variables.$button-font-size;
+                        width: variables.$button-width;
+                        text-transform: uppercase;
+                        text-align: center;
+                        padding: variables.$button-padding 0;
+                        border: 2px solid variables.$button-border-color;
+                        border-radius: variables.$button-border-radius;
+                    }
                 }
             }
-        }
         }
     }
 }
