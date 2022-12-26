@@ -1,0 +1,44 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables';
+
+.about {
+    background: variables.$background-color-about;
+    .containeer {
+        @include containeer;
+    }
+    .about-block {
+        padding: variables.$padding-about;
+        .about__elements {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .about__description {
+                margin: 0;
+                width: 50%;
+                .about__description-h2 {
+                    margin: 0;
+                    width: 80%;
+                    color: variables.$font-color-green-word;
+                    font-size: variables.$font-size-about-h2;
+                    font-weight: 500;
+                    .orange-word {
+                        color: variables.$font-color-orange-word;
+                    }
+                }
+                .about__description-p {
+                    padding-top: variables.$padding-about-p;
+                    font-family: Inter;
+                    font-size: variables.$font-size-about-p;
+                    line-height: variables.$line-height-about-p;
+                }
+            }
+            .about__picture {
+                margin: 0;
+                width: 464px;
+                height: 479px;
+                background-image: url('../images/houseplant.png');
+                background-size: cover;
+            }
+        }
+    }
+}
