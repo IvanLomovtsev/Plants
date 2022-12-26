@@ -37,19 +37,17 @@
                     font-size: variables.$font-size-welcome-p;
                     line-height: variables.$line-height-welcome-p;
                     padding: variables.$padding-welcome-p 0;
-                    
                 }
                 .button {
-                    margin-top: variables.$button-margin-top;
                     .button-learn {
                         margin: 0;
-                        font-size: variables.$button-font-size;
-                        width: variables.$button-width;
+                        font-size: variables.$button-welcome-font-size;
+                        width: variables.$button-welcome-width;
                         text-transform: uppercase;
                         text-align: center;
-                        padding: variables.$button-padding 0;
+                        padding: variables.$button-welcome-padding 0;
                         border: 2px solid variables.$button-border-color;
-                        border-radius: variables.$button-border-radius;
+                        border-radius: variables.$button-welcome-border-radius;
                     }
                 }
             }
