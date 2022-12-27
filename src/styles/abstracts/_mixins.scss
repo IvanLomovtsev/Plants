@@ -1,5 +1,22 @@
 @use "./variables";
 
+$width-containeer: 1222px;
+
+$width-button: 161px;
+$padding-button: 11px;
+$font-size-button: 1.2rem;
+$border-radius-button: 5px;
+
 @mixin containeer() {
-    width: 1222px;
+    width: $width-containeer;
+}
+@mixin button (){
+    width: $width-button;
+    color: variables.$font-color-orange-word;
+    text-align: center;
+    font-family: Inika;
+    font-size: $font-size-button;
+    padding: $padding-button 0;
+    border: 2px solid variables.$border-color-button;
+    border-radius: $border-radius-button;
 }

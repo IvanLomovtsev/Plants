@@ -1,10 +1,16 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables';
 
+$font-size-header: 1rem;
+$font-color-header: #010201;
+$padding-logo-img: 10px;
+$width-navigation: 37%;
+$margin-header: 12.5%;
+
 .header {
-    background-color: variables.$background-color;
-    font-size: variables.$font-size-header;
-    color: variables.$font-color-header;
+    background-color: variables.$color-primary;
+    color: $font-color-header;
+    font-size: $font-size-header;
     .containeer {
         @include containeer();
     }
@@ -19,19 +25,19 @@
             display: flex;
             justify-content: flex-start;
             .logo__img {
-                padding-bottom: variables.$padding-logo-img;
+                padding-bottom: $padding-logo-img;
             }
         }
         .navigation {
-            width: variables.$navigation-width;
+            width: $width-navigation;
             margin-right: 0;
             .navigation__elements {
                 display: flex;
                 justify-content: space-between;
                 .navigation__elements-li {
-                    margin: variables.$margin-header 0;
+                    margin: $margin-header 0;
                     a {
-                        color: variables.$font-color-header;
+                        color: $font-color-header;
                     }
                 }
             }

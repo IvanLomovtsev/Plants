@@ -1,35 +1,46 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables';
 
+$padding-about: 93px;
+$padding-about-p: 40px;
+
+$width-description: 50%;
+$width-description-h2: 80%;
+
+$font-size-h2: 2.5rem;
+$font-size-p: 1.25rem;
+
+$line-height-about-p: 30px;
+
 .about {
-    background: variables.$background-color-about;
+    background: variables.$color-secondary;
     .containeer {
         @include containeer;
     }
     .about-block {
-        padding: variables.$padding-about;
+        padding: $padding-about;
         .about__elements {
             display: flex;
             justify-content: space-between;
             align-items: center;
             .about__description {
                 margin: 0;
-                width: 50%;
+                width: $width-description;
                 .about__description-h2 {
                     margin: 0;
-                    width: 80%;
+                    width: $width-description-h2;
                     color: variables.$font-color-green-word;
-                    font-size: variables.$font-size-about-h2;
+                    font-size: $font-size-h2;
                     font-weight: 500;
                     .orange-word {
                         color: variables.$font-color-orange-word;
                     }
                 }
                 .about__description-p {
-                    padding-top: variables.$padding-about-p;
+                    padding-top: $padding-about-p;
                     font-family: Inter;
-                    font-size: variables.$font-size-about-p;
-                    line-height: variables.$line-height-about-p;
+                    font-size: $font-size-p;
+                    line-height: $line-height-about-p;
                 }
             }
             .about__picture {

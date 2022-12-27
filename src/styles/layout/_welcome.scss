@@ -1,8 +1,27 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables';
 
+$padding-welcome-elements: 62px;
+$padding-welcome-p: 42px;
+
+$width-picture: 448.8px;
+$height-picture: 409.76px;
+$width-description: 45%;
+$width-description-p: 95%;
+
+$font-size-welcome-h2: 2.8rem;
+$font-size-welcome-p: 1.25rem;
+$letter-spacing-h2: 0.8px;
+$line-height-welcome-p: 35px;
+
+$width-welcome-button: 157.8px;
+$margin-top-welcome-button: 2px;
+$padding-welcome-button: 12px;
+$font-size-welcome-button: 1rem;
+$border-radius-welcome-button: 10px;
+
 .welcome {
-    background: variables.$background-color;
+    background: variables.$color-primary;
     .containeer {
         @include containeer;
     }
@@ -11,43 +30,43 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: variables.$padding-welcome 0;
+            padding: $padding-welcome-elements 0;
             .welcome__picture {
-                width: 448.8px;    
-                height: 409.76px;
+                width: $width-picture;    
+                height: $height-picture;
                 margin: 0;
                 background-image: url("../images/leafs.png");
                 background-size: cover;
             }
             .welcome__description {
                 margin: 0;
-                width: 45%;
+                width: $width-description;
                 font-family: Inter;
                 .welcome__description-h2 {
-                    font-size: variables.$font-size-welcome-h2;
+                    font-size: $font-size-welcome-h2;
                     font-weight: 700;
-                    letter-spacing: 0.8px;
+                    letter-spacing: $letter-spacing-h2;
                     .green-word {
                         color: variables.$font-color-green-word;
                     }
                 }
                 .welcome__description-p {
-                    width: 95%;
+                    width: $width-description-p;
                     margin: 0;
-                    font-size: variables.$font-size-welcome-p;
-                    line-height: variables.$line-height-welcome-p;
-                    padding: variables.$padding-welcome-p 0;
+                    font-size: $font-size-welcome-p;
+                    line-height: $line-height-welcome-p;
+                    padding: $padding-welcome-p 0;
                 }
                 .button {
-                    .button-learn {
+                    .button-learn {      
                         margin: 0;
-                        font-size: variables.$button-welcome-font-size;
-                        width: variables.$button-welcome-width;
+                        font-size: $font-size-welcome-button;
+                        width: $width-welcome-button;
                         text-transform: uppercase;
                         text-align: center;
-                        padding: variables.$button-welcome-padding 0;
-                        border: 2px solid variables.$button-border-color;
-                        border-radius: variables.$button-welcome-border-radius;
+                        padding: $padding-welcome-button 0;
+                        border: 2px solid variables.$border-color-button;
+                        border-radius: $border-radius-welcome-button;
                     }
                 }
             }
