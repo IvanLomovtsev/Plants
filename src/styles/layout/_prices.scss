@@ -1,0 +1,117 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables';
+
+$color-prices: #000000;
+$color-primary: #EDF2EC;
+$color-choice-rate-button: #D9D9D9;
+$padding-prices: 40px;
+$width-prices-choice: 27%;
+$width-choice: 100%;
+$width-choice-rate: 75%;
+
+$font-size-prices-h2: 2.5rem;
+$margin-choice-rate: 32px;
+$border-radius-choice-rate: 20px;
+$margin-prices-h2: 60px;
+$border-radius-choice: 20px;
+$padding-choice-rate-p: 14px;
+$font-size-choice-rate-p: 1.2rem;
+$border-radius-choice-rate-button: 50%;
+$margin-choice-rate-button: 40px;
+$size-choice-rate-button: 16px;
+$width-prices-help-p: 70%;
+$size-prices-help-p: 2.5rem;
+$letter-spacing-prices-help-p: 0.6px;
+$width-prices-help-picture: 152px;
+$height-prices-help-picture: 175px;
+
+
+.prices {
+    background: variables.$color-secondary;
+    font-family: Inter;
+    .containeer {
+        @include containeer;
+    }
+    .prices-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        padding-top: $font-size-prices-h2;
+        .prices-choice {
+            width: $width-prices-choice;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            .prices-h2 {
+                margin: 0 0 $margin-prices-h2;
+                font-size: $font-size-prices-h2;
+                color: $color-prices;
+            }
+            .choice {
+                width: 100%;
+                margin: 0;
+                border-radius: $border-radius-choice;
+                border: 1px solid $color-primary;
+                .choice-rate {
+                    display: flex;
+                    flex-direction: wrap;
+                    justify-content: space-between;
+                    align-items: center;
+                    width: $width-choice-rate;
+                    margin-top: $margin-choice-rate;
+                    border-radius: $border-radius-choice;
+                    background-color: $color-primary;
+                    .choice-rate-p {
+                        margin: 0;
+                        color: $color-prices;
+                        font-weight: 700;
+                        font-size: $font-size-choice-rate-p;
+                        padding: $padding-choice-rate-p 0 $padding-choice-rate-p calc($padding-choice-rate-p*2.86);  
+                    }
+                    .choice-rate-button {
+                        border-radius: $border-radius-choice-rate-button;
+                        margin: 0;
+                        margin-right: $margin-choice-rate-button;
+                        width: $size-choice-rate-button;
+                        height: $size-choice-rate-button;
+                        background-color: $color-choice-rate-button;
+                    }
+                }
+                .choice-rate:last-child {
+                    margin-bottom: $margin-choice-rate;
+                }
+            }
+        }
+        .prices-help {
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            .prices-help-p {
+                width: $width-prices-help-p;
+                margin: 0;
+                font-weight: 700;
+                text-align: right;
+                font-size: $size-prices-help-p;
+                letter-spacing: $letter-spacing-prices-help-p;
+                color: $color-prices;
+                
+            }
+            .prices-help-button {
+                margin: 44px 0;
+                button {
+                    @include button;
+                    background-color: variables.$color-secondary;
+                }
+            }
+            .prices-help-picture {
+                width: $width-prices-help-picture;
+                height: $height-prices-help-picture;
+                margin: 0;
+                background-image: url("../images/leafs.png");
+                background-size: cover;
+            }
+        }
+    }
+}

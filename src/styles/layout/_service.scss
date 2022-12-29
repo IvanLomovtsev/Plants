@@ -1,71 +1,78 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables';
 
+$padding-service-elements: 40px;
+$margin-service-menu: 25px;
+$margin-service-controls: 60px;
+$font-size-service-h2: 2.5rem;
+$font-size-card-h3: 1.3rem;
+$margin-service-controls: 60px;
+$margin-top-card: 50px;
+$margin-bottom-card-img: 10px;
+$margin-bottom-service-elements__cards: 80px;
+$padding-top-card-p: 12px;
+$padding-bottom-card-p: 35px;
+$border-color-card: #E3E1D5;
+$border-radius-card: 20px;
+
 .service {
-    background: variables.$background-color;
+    background: variables.$color-primary;
     .containeer {
         @include containeer;
     }
     .service-block {
         .service-elements {
-            padding: variables.$padding-service-elements 0;
+            padding: $padding-service-elements 0;
             .service-elements__menu {
                 margin: 0;
                 display: flex;
                 flex-wrap: wrap;
                 align-items: center;
-                margin-bottom: variables.$margin-service-menu;
+                margin-bottom: $margin-service-menu;
                 .service-elements-h {
                     width: 30%;
                     margin: 0;
-                    font-size: variables.$font-size-service-h2;
+                    font-size: $font-size-service-h2;
                     color: variables.$font-color-green-word;
                 }
                 .controls {
                     width: 49%;
-                    margin-left: variables.$margin-service-controls;
+                    margin-left: $margin-service-controls;
                     display: flex;
                     flex-direction: row;
                     justify-content: space-between;
                     .button {
-                        width: variables.$button-width;
-                        color: variables.$font-color-orange-word;
-                        text-align: center;
-                        font-family: Inika;
-                        font-size: variables.$button-font-size;
-                        padding: variables.$button-padding 0;
-                        border: 2px solid variables.$button-border-color;
-                        border-radius: variables.$button-border-radius;
+                        @include button()
                     }
                 }
             }
             .service-elements__cards {
                 margin: 0;
-                margin-bottom: variables.$margin-bottom-service-elements__cards;
+                margin-bottom: $margin-bottom-service-elements__cards;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
                 .card {
                     margin: 0;
-                    margin-top: variables.$margin-top-card;
+                    margin-top: $margin-top-card;
                     width: 27%;
-                    border: 1px solid variables.$border-color-card;
-                    border-radius: variables.$border-radius-card;
+                    border: 1px solid $border-color-card;
+                    border-radius: $border-radius-card;
                     .card-img {
                         display: block;
-                        margin-bottom: variables.$margin-bottom-card-img;
+                        margin-bottom: $margin-bottom-card-img;
                     }
                     .card-h3 {
                         text-align: center;
                         font-family: Inter;
                         color: variables.$font-color-orange-word;
-                        font-size: variables.$font-size-card-h3;
+                        font-size: $font-size-card-h3;
                         font-weight: bold;
                     }
                     .card-p {
                         text-align: center;
                         font-family: Inter;
-                        padding: variables.$padding-top-card-p 0 variables.$padding-bottom-card-p;
+                        padding: $padding-top-card-p 0 $padding-bottom-card-p;
                     }
                 }
             }
