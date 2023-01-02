@@ -14,16 +14,42 @@
             flex-direction: wrap;
             justify-content: space-between;
             align-items: center;
-            margin: 40px 0;
+            margin: 50px 0;
+            font-size: 1.25rem;
             .github {
                 margin: 0;
-                width: 182px;
+                width: 170px;
                 display: flex;
                 justify-content: space-between;
+                .github-copyright {
+                    margin: 0;
+                    width: 19px;
+                }
+                .github-year {
+                    margin: 0;
+                    width: 49px;
+                }
+                .github-link {
+                    margin: 0;
+                    width: 61px;
+                    color: #000000;
+                    transition: 0.2s linear;
+                    &:hover {
+                        color: variables.$color-orange;
+                    }
+                }
             }
             .course-name {
                 margin: 0;
-                width: 211px;
+                width: 220px;
+                padding-left: 27px;
+                .course-name-link {
+                    color: #000000;
+                    transition: 0.2s linear;
+                    &:hover {
+                        color: variables.$color-orange;
+                    }
+                }
             }
             .social {
                 margin: 0;
@@ -31,36 +57,56 @@
                 display: flex;
                 justify-content: space-between;
                 .social-instagramm {
+                    margin: 0;
                     width: 32px;
                     height: 32px;
                     background-image: url("../icons/inst.svg");
                     background-size: 100%;
                     background-repeat: no-repeat;
                     background-position: center;
+                    transition: 0.2s linear;
+                    &:hover {
+                        background-image: url("../icons/inst-hover.svg");
+                    }
                 }
                 .social-facebook {
+                    margin: 0;
                     width: 32px;
                     height: 32px;
                     background-image: url("../icons/fb.svg");
                     background-size: 100%;
                     background-repeat: no-repeat;
                     background-position: center;
+                    transition: 0.2s linear;
+                    &:hover {
+                        background-image: url("../icons/fb-hover.svg");
+                    }
                 }
                 .social-twitter {
+                    margin: 0;
                     width: 32px;
                     height: 32px;
                     background-image: url("../icons/tw.svg");
                     background-size: 100%;
                     background-repeat: no-repeat;
                     background-position: center;
+                    transition: 0.2s linear;
+                    &:hover {
+                        background-image: url("../icons/tw-hover.svg");
+                    }
                 }
                 .social-pinterest {
+                    margin: 0;
                     width: 32px;
                     height: 32px;
                     background-image: url("../icons/pinterest.svg");
                     background-size: 100%;
                     background-repeat: no-repeat;
                     background-position: center;
+                    transition: 0.2s linear;
+                    &:hover {
+                        background-image: url("../icons/pinterest-hover.svg");
+                    }
                 }
             }
         }
