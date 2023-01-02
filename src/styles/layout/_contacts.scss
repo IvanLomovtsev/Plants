@@ -1,0 +1,82 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables';
+
+$padding-top: 53px;
+$width-contact-picture: 33%;
+$height-contact-picture: 497px;
+$width-contacts-h2: 20%;
+$padding-top-contacts-h2: 8px;
+$padding-left-contacts-h2: 40px;
+$margin-contacts-select: 95px;
+$width-contacts-select: 37%;
+$padding-contacts-selects: 12px;
+
+$font-size-contacts-h2: 2.5rem;
+$select-town-indicator: 16px;
+$border-radius-select-town-indicator: 50%;
+$margin-select-town-indicator: 35px;
+$size-select-town-indicator: 16px;
+$color-select-town-indicator: #AEA1A1;
+
+$font-size-contacts-select-p: 1.3rem;
+$padding-left: 22px;
+
+
+.contacts {
+    background: variables.$color-primary;
+    font-family: Inter;
+    .containeer {
+        @include containeer;
+    }
+    .contacts-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-top: $padding-top;
+        .contacts-picture {
+            margin: 0;
+            width: $width-contact-picture;
+            height: $height-contact-picture;
+            background-image: url("../images/contact_woman.png");
+            background-size: cover;
+        }
+        .contacts-h2 {
+            margin: 0;
+            width: $width-contacts-h2;
+            padding-top: $padding-top-contacts-h2;
+            padding-left: $padding-left-contacts-h2;
+            text-align: center;
+            font-size: $font-size-contacts-h2;
+            font-family: Inika;
+            color: variables.$font-color-green-word;
+        }
+        .contacts-select {
+            margin: $margin-contacts-select 0;
+            width: $width-contacts-select;
+            background-color: #D6E7D2;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: $padding-contacts-selects 0;
+            .contacts-select-p {
+                margin: 0;
+                font-size: $font-size-contacts-select-p;
+                padding-left: $padding-left;
+            }
+            .contacts-select-indicator {
+                width: $select-town-indicator;
+                height: $select-town-indicator;
+                border-radius: $border-radius-select-town-indicator;
+                margin-right: $margin-select-town-indicator;
+                width: $size-select-town-indicator;
+                height: $size-select-town-indicator;
+                background-color: $color-select-town-indicator;
+                background-image: url("../icons/arrow_contacts.svg");
+                background-size: 40%;
+                background-repeat: no-repeat;
+                background-position: center;
+            }
+        }
+    }
+}

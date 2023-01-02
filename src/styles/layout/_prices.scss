@@ -3,22 +3,23 @@
 
 $color-prices: #000000;
 $color-primary: #EDF2EC;
-$color-choice-rate-button: #D9D9D9;
-$padding-prices: 40px;
+$color-choice-rate-indicator: #D9D9D9;
+$padding-prices-top: 40px;
+$padding-prices-button: 110px;
 $width-prices-choice: 27%;
 $width-choice: 100%;
 $width-choice-rate: 75%;
 
 $font-size-prices-h2: 2.5rem;
-$margin-choice-rate: 32px;
+$margin-choice-rate: 34px;
 $border-radius-choice-rate: 20px;
 $margin-prices-h2: 60px;
 $border-radius-choice: 20px;
 $padding-choice-rate-p: 14px;
-$font-size-choice-rate-p: 1.2rem;
-$border-radius-choice-rate-button: 50%;
-$margin-choice-rate-button: 40px;
-$size-choice-rate-button: 16px;
+$font-size-choice-rate-p: 1.3rem;
+$border-radius-choice-rate-indicator: 50%;
+$margin-choice-rate-indicator: 40px;
+$size-choice-rate-indicator: 16px;
 $width-prices-help-p: 70%;
 $size-prices-help-p: 2.5rem;
 $letter-spacing-prices-help-p: 0.6px;
@@ -36,7 +37,7 @@ $height-prices-help-picture: 175px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding-top: $font-size-prices-h2;
+        padding: $padding-prices-top 0 $padding-prices-button;
         .prices-choice {
             width: $width-prices-choice;
             margin: 0;
@@ -69,13 +70,17 @@ $height-prices-help-picture: 175px;
                         font-size: $font-size-choice-rate-p;
                         padding: $padding-choice-rate-p 0 $padding-choice-rate-p calc($padding-choice-rate-p*2.86);  
                     }
-                    .choice-rate-button {
-                        border-radius: $border-radius-choice-rate-button;
+                    .choice-rate-indicator {
+                        border-radius: $border-radius-choice-rate-indicator;
                         margin: 0;
-                        margin-right: $margin-choice-rate-button;
-                        width: $size-choice-rate-button;
-                        height: $size-choice-rate-button;
-                        background-color: $color-choice-rate-button;
+                        margin-right: $margin-choice-rate-indicator;
+                        width: $size-choice-rate-indicator;
+                        height: $size-choice-rate-indicator;
+                        background-color: $color-choice-rate-indicator;
+                        background-image: url("../icons/arrow_prices.svg");
+                        background-size: 40%;
+                        background-repeat: no-repeat;
+                        background-position: center;
                     }
                 }
                 .choice-rate:last-child {
@@ -95,8 +100,7 @@ $height-prices-help-picture: 175px;
                 text-align: right;
                 font-size: $size-prices-help-p;
                 letter-spacing: $letter-spacing-prices-help-p;
-                color: $color-prices;
-                
+                color: $color-prices; 
             }
             .prices-help-button {
                 margin: 44px 0;

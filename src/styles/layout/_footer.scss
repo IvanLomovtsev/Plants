@@ -1,0 +1,70 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables';
+
+
+
+.footer {
+    background: variables.$color-secondary;
+    font-family: Inter;
+    color: #000000;
+    .containeer {
+        @include containeer;
+    }
+    .footer-block {      
+        .footer-block-information {
+            display: flex;
+            flex-direction: wrap;
+            justify-content: space-between;
+            align-items: center;
+            margin: 40px 0;
+            .github {
+                margin: 0;
+                width: 182px;
+                display: flex;
+                justify-content: space-between;
+            }
+            .course-name {
+                margin: 0;
+                width: 211px;
+            }
+            .social {
+                margin: 0;
+                width: 188px;
+                display: flex;
+                justify-content: space-between;
+                .social-instagramm {
+                    width: 32px;
+                    height: 32px;
+                    background-image: url("../icons/inst.svg");
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                .social-facebook {
+                    width: 32px;
+                    height: 32px;
+                    background-image: url("../icons/fb.svg");
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                .social-twitter {
+                    width: 32px;
+                    height: 32px;
+                    background-image: url("../icons/tw.svg");
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+                .social-pinterest {
+                    width: 32px;
+                    height: 32px;
+                    background-image: url("../icons/pinterest.svg");
+                    background-size: 100%;
+                    background-repeat: no-repeat;
+                    background-position: center;
+                }
+            }
+        }
+    }
+}
