@@ -1,31 +1,41 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables';
 
-$color-prices: #000000;
-$color-primary: #EDF2EC;
-$color-choice-rate-indicator: #D9D9D9;
-$padding-prices-top: 40px;
-$padding-prices-button: 110px;
-$width-prices-choice: 27%;
-$width-choice: 100%;
-$width-choice-rate: 75%;
+//prices-choice
+$padding-prices-top: 42px;
+$padding-prices-bottom: 110px;
 
-$font-size-prices-h2: 2.5rem;
-$margin-choice-rate: 34px;
-$border-radius-choice-rate: 20px;
-$margin-prices-h2: 60px;
+//choice
+$width-prices-choice: 26.8%;
+
+//prices-h2
+$margin-h2: 60px;
+$font-size-h2: 2.5rem;
+$color-prices: #000000;
+
+//choice
 $border-radius-choice: 20px;
-$padding-choice-rate-p: 14px;
+$width-choice: 100%;
+$padding-choice: 2px;
+$border-radius-choice: 20px;
+$width-choice-rate: 76%;
+$margin-choice-rate: 32px;
+$padding-choice-rate-p: 12px;
 $font-size-choice-rate-p: 1.3rem;
+$color-primary: #EDF2EC;
+
+//choice-rate-indicator
 $border-radius-choice-rate-indicator: 50%;
 $margin-choice-rate-indicator: 40px;
 $size-choice-rate-indicator: 16px;
+$color-choice-rate-indicator: #D9D9D9;
+
+//help
 $width-prices-help-p: 70%;
 $size-prices-help-p: 2.5rem;
 $letter-spacing-prices-help-p: 0.6px;
 $width-prices-help-picture: 152px;
 $height-prices-help-picture: 175px;
-
 
 .prices {
     background: variables.$color-secondary;
@@ -37,7 +47,7 @@ $height-prices-help-picture: 175px;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        padding: $padding-prices-top 0 $padding-prices-button;
+        padding: $padding-prices-top 0 $padding-prices-bottom;
         .prices-choice {
             width: $width-prices-choice;
             margin: 0;
@@ -45,13 +55,14 @@ $height-prices-help-picture: 175px;
             flex-direction: column;
             align-items: flex-start;
             .prices-h2 {
-                margin: 0 0 $margin-prices-h2;
-                font-size: $font-size-prices-h2;
+                margin: 0 0 $margin-h2;
+                font-size: $font-size-h2;
                 color: $color-prices;
             }
             .choice {
-                width: 100%;
+                width: $width-choice;
                 margin: 0;
+                padding: $padding-choice;
                 border-radius: $border-radius-choice;
                 border: 1px solid $color-primary;
                 .choice-rate {
@@ -68,7 +79,7 @@ $height-prices-help-picture: 175px;
                         color: $color-prices;
                         font-weight: 700;
                         font-size: $font-size-choice-rate-p;
-                        padding: $padding-choice-rate-p 0 $padding-choice-rate-p calc($padding-choice-rate-p*2.86);  
+                        padding: $padding-choice-rate-p 0 $padding-choice-rate-p calc($padding-choice-rate-p*3.1);  
                     }
                     .choice-rate-indicator {
                         border-radius: $border-radius-choice-rate-indicator;
@@ -83,7 +94,7 @@ $height-prices-help-picture: 175px;
                         background-position: center;
                     }
                 }
-                .choice-rate:last-child {
+                .choice-rate {
                     margin-bottom: $margin-choice-rate;
                 }
             }
@@ -101,6 +112,9 @@ $height-prices-help-picture: 175px;
                 font-size: $size-prices-help-p;
                 letter-spacing: $letter-spacing-prices-help-p;
                 color: $color-prices; 
+                .green-word {
+                    color: variables.$color-green;
+                }
             }
             .prices-help-button {
                 margin: 44px 0;
