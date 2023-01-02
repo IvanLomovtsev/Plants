@@ -1,11 +1,16 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables';
 
+//header
 $font-size-header: 1rem;
 $font-color-header: #010201;
-$padding-logo-img: 10px;
-$width-navigation: 37%;
 $margin-header: 12.5%;
+
+//logo
+$padding-logo-img: 10px;
+
+//navigation
+$width-navigation: 37%;
 
 .header {
     background-color: variables.$color-primary;
