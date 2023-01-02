@@ -46,11 +46,9 @@ $width-navigation: 37%;
                         scroll-behavior: smooth;
                         color: $color-header;
                         transition: 0.2s linear;
-                    }
-                }
-                .navigation__elements-li:hover {
-                    a {
-                        color: variables.$color-orange;
+                        &:hover {
+                            color: variables.$color-orange;
+                        }
                     }
                 }
             }

@@ -4,7 +4,7 @@ $width-containeer: 1222px;
 
 $width-button: 161px;
 $padding-button: 11px;
-$font-size-button: 1.2rem;
+$font-size-button: 1.25rem;
 $border-radius-button: 5px;
 
 @mixin containeer() {
@@ -12,11 +12,17 @@ $border-radius-button: 5px;
 }
 @mixin button (){
     width: $width-button;
-    color: variables.$font-color-orange-word;
+    color: variables.$color-orange;
     text-align: center;
     font-family: Inika;
     font-size: $font-size-button;
     padding: $padding-button 0;
-    border: 2px solid variables.$border-color-button;
+    border: 2px solid variables.$color-orange;
     border-radius: $border-radius-button;
+    transition: 0.2s linear;
+    cursor: pointer;
+    &:hover {
+        color: variables.$color-secondary;
+        background-color: variables.$color-orange;
+    }
 }

@@ -1,15 +1,21 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables';
 
-$padding-service-elements: 40px;
+//service-elements
+$padding-service-elements: 35px;
+
+//menu
 $margin-service-menu: 25px;
-$margin-service-controls: 60px;
-$font-size-service-h2: 2.5rem;
+$width-h2: 30%;
+$width-controls: 49%;
+$font-size-h2: 2.5rem;
+$margin-service-controls: 62px;
+
+//cards
 $font-size-card-h3: 1.3rem;
-$margin-service-controls: 60px;
-$margin-top-card: 50px;
-$margin-bottom-card-img: 10px;
-$margin-bottom-service-elements__cards: 80px;
+$margin-bottom-cards: 80px;
+$margin-top-card: 55px;
+$margin-bottom-card-img: 7px;
 $padding-top-card-p: 12px;
 $padding-bottom-card-p: 35px;
 $border-color-card: #E3E1D5;
@@ -29,14 +35,14 @@ $border-radius-card: 20px;
                 flex-wrap: wrap;
                 align-items: center;
                 margin-bottom: $margin-service-menu;
-                .service-elements-h {
-                    width: 30%;
+                .service-elements-h2 {
+                    width: $width-h2;
                     margin: 0;
-                    font-size: $font-size-service-h2;
-                    color: variables.$font-color-green-word;
+                    font-size: $font-size-h2;
+                    color: variables.$color-green;
                 }
                 .controls {
-                    width: 49%;
+                    width: $width-controls;
                     margin-left: $margin-service-controls;
                     display: flex;
                     flex-direction: row;
@@ -48,7 +54,7 @@ $border-radius-card: 20px;
             }
             .service-elements__cards {
                 margin: 0;
-                margin-bottom: $margin-bottom-service-elements__cards;
+                margin-bottom: $margin-bottom-cards;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
@@ -65,7 +71,7 @@ $border-radius-card: 20px;
                     .card-h3 {
                         text-align: center;
                         font-family: Inter;
-                        color: variables.$font-color-orange-word;
+                        color: variables.$color-orange;
                         font-size: $font-size-card-h3;
                         font-weight: bold;
                     }

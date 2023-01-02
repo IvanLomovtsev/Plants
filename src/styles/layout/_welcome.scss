@@ -73,6 +73,12 @@ $border-radius-welcome-button: 10px;
                         padding: $padding-welcome-button 0;
                         border: 2px solid variables.$color-orange;
                         border-radius: $border-radius-welcome-button;
+                        transition: 0.2s linear;
+                        cursor: pointer;
+                        &:hover {
+                            color: variables.$color-secondary;
+                            background-color: variables.$color-orange;
+                        }
                     }
                 }
             }
