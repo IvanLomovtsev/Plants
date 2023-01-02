@@ -1,8 +1,6 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables';
 
-
-
 .footer {
     background: variables.$color-secondary;
     font-family: Inter;
