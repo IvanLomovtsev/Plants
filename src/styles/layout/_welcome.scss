@@ -1,21 +1,26 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables';
 
+//welcome-elements
 $padding-welcome-elements: 62px;
 $padding-welcome-p: 42px;
 
+//welcome-picture
 $width-picture: 448.8px;
-$height-picture: 409.76px;
+$height-picture: 409.8px;
+
+//welcome-description
 $width-description: 45%;
 $width-description-p: 95%;
+$padding-description-p: 42px;
+$font-size-h2: 2.7rem;
+$letter-spacing-h2: 1.8px;
+$font-size-description-p: 1.25rem;
+$line-height-description-p: 35px;
 
-$font-size-welcome-h2: 2.8rem;
-$font-size-welcome-p: 1.25rem;
-$letter-spacing-h2: 0.8px;
-$line-height-welcome-p: 35px;
-
+//welcome-button
 $width-welcome-button: 157.8px;
-$margin-top-welcome-button: 2px;
+$margin-top-welcome-button: 5px;
 $padding-welcome-button: 12px;
 $font-size-welcome-button: 1rem;
 $border-radius-welcome-button: 10px;
@@ -43,21 +48,22 @@ $border-radius-welcome-button: 10px;
                 width: $width-description;
                 font-family: Inter;
                 .welcome__description-h2 {
-                    font-size: $font-size-welcome-h2;
+                    font-size: $font-size-h2;
                     font-weight: 700;
                     letter-spacing: $letter-spacing-h2;
                     .green-word {
-                        color: variables.$font-color-green-word;
+                        color: variables.$color-green;
                     }
                 }
                 .welcome__description-p {
                     width: $width-description-p;
                     margin: 0;
-                    font-size: $font-size-welcome-p;
-                    line-height: $line-height-welcome-p;
-                    padding: $padding-welcome-p 0;
+                    font-size: $font-size-description-p;
+                    line-height: $line-height-description-p;
+                    padding: $padding-description-p 0;
                 }
                 .button {
+                    margin-top: $margin-top-welcome-button;
                     .button-learn {      
                         margin: 0;
                         font-size: $font-size-welcome-button;
@@ -65,7 +71,7 @@ $border-radius-welcome-button: 10px;
                         text-transform: uppercase;
                         text-align: center;
                         padding: $padding-welcome-button 0;
-                        border: 2px solid variables.$border-color-button;
+                        border: 2px solid variables.$color-orange;
                         border-radius: $border-radius-welcome-button;
                     }
                 }

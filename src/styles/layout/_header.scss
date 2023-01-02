@@ -43,6 +43,7 @@ $width-navigation: 37%;
                     cursor: pointer;
                     margin: $margin-header 0;
                     a {
+                        scroll-behavior: smooth;
                         color: $color-header;
                         transition: 0.2s linear;
                     }
