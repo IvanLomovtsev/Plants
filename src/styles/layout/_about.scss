@@ -1,16 +1,20 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables';
 
-$padding-about: 93px;
-$padding-about-p: 40px;
+//about
+$padding-about: 95px;
 
+//description
 $width-description: 50%;
 $width-description-h2: 80%;
-
+$padding-description-p: 40px;
+$line-height-description-p: 30px;
 $font-size-h2: 2.5rem;
-$font-size-p: 1.25rem;
+$font-size-description-p: 1.25rem;
 
-$line-height-about-p: 30px;
+//picture
+$width-picture: 464px;
+$height-picture: 479px;
 
 .about {
     background: variables.$color-secondary;
@@ -29,24 +33,24 @@ $line-height-about-p: 30px;
                 .about__description-h2 {
                     margin: 0;
                     width: $width-description-h2;
-                    color: variables.$font-color-green-word;
+                    color: variables.$color-green;
                     font-size: $font-size-h2;
                     font-weight: 500;
                     .orange-word {
-                        color: variables.$font-color-orange-word;
+                        color: variables.$color-orange;
                     }
                 }
                 .about__description-p {
-                    padding-top: $padding-about-p;
+                    padding-top: $padding-description-p;
                     font-family: Inter;
-                    font-size: $font-size-p;
-                    line-height: $line-height-about-p;
+                    font-size: $font-size-description-p;
+                    line-height: $line-height-description-p;
                 }
             }
             .about__picture {
                 margin: 0;
-                width: 464px;
-                height: 479px;
+                width: $width-picture;
+                height: $height-picture;
                 background-image: url('../images/houseplant.png');
                 background-size: cover;
             }

@@ -5,9 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Plants</title>
+    <link rel="shortcut icon" href="/src/icons/logo_vector.png" type="image/png">
 </head>
 <body>
-    <header class="header">
+    <header class="header" id="home">
         <div class="header-block containeer">
             <h1 class="header-block__h1">Plants</h1>
             <div class="logo">
@@ -16,151 +17,178 @@
             </div>
             <nav class="navigation">
                 <ul class="navigation__elements">
-                    <li class="navigation__elements-li"><a href="">Home</a></li>
-                    <li class="navigation__elements-li"><a href="">About us</a></li>
-                    <li class="navigation__elements-li"><a href="">Service</a></li>
-                    <li class="navigation__elements-li"><a href="">Price</a></li>
-                    <li class="navigation__elements-li"><a href="">Contacts</a></li>
+                    <li class="navigation__elements-li"><a href="#home">Home</a></li>
+                    <li class="navigation__elements-li"><a href="#about">About us</a></li>
+                    <li class="navigation__elements-li"><a href="#service">Service</a></li>
+                    <li class="navigation__elements-li"><a href="#price">Price</a></li>
+                    <li class="navigation__elements-li"><a href="#contacts">Contacts</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-    <section class="welcome">
-        <div class="welcome-block containeer">
-            <div class="welcome-elements">
-                <div class="welcome__picture">
-                
-                </div>
-                <div class="welcome__description">
-                    <h2 class="welcome__description-h2">We grow <span class="green-word">plants</span> and give you oxygen</h2>
-                    <p class="welcome__description-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-                    </p>
-                    <form class="button">
-                        <button class="button-learn">Learn more</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="about">
-        <div class="about-block containeer">
-            <div class="about__elements">
-                <div class="about__description">
-                    <h2 class="about__description-h2">We are<span class="orange-word"> professional experienced </span>gardeners</h2>
-                    <p class="about__description-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
-                        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
-                        when an unknown printer took a galley of type and scrambled it to make a type 
-                        specimen book. It has survived not only five centuries, but also the leap into 
-                        electronic typesetting, remaining essentially unchanged.
-                    </p>
-                </div>
-                <div class="about__picture">
-
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="service">
-        <div class="service-block containeer">
-            <div class="service-elements">
-                <div class="service-elements__menu">
-                    <h2 class="service-elements-h">Service and our projects</h2>
-                    <div class="controls">
-                        <form class="controls__button">
-                            <button class="button">Gardens</button>
-                        </form>
-                        <form class="controls__button">
-                            <button class="button">Lawn</button>
-                        </form>
-                        <form class="controls__button">
-                            <button class="button">Planting</button>
-                        </form>
-                    </div>
-                </div>
-                <div class="service-elements__cards">
-                    <div class="card">
-                        <img class="card-img" src="./images/garden_care.png" alt="garden care">
-                        <h3 class="card-h3">Garden care</h3>
-                        <p class="card-p">Lorem Ipsum has been the industry</p>
-                    </div>
-                    <div class="card">
-                        <img class="card-img" src="./images/planting.png" alt="planting">
-                        <h3 class="card-h3">Planting</h3>
-                        <p class="card-p">Lorem Ipsum has been the industry</p>
-                    </div>
-                    <div class="card">
-                        <img class="card-img" src="./images/lawn_care.png" alt="lawn care">
-                        <h3 class="card-h3">Lawn care</h3>
-                        <p class="card-p">Lorem Ipsum has been the industry</p>
-                    </div>
-                    <div class="card">
-                        <img class="card-img" src="./images/planting_2.png" alt="planting">
-                        <h3 class="card-h3">Planting</h3>
-                        <p class="card-p">Lorem Ipsum has been the industry</p>
-                    </div>
-                    <div class="card">
-                        <img class="card-img" src="./images/garden_care2.png" alt="garden care">
-                        <h3 class="card-h3">Garden care</h3>
-                        <p class="card-p">Lorem Ipsum has been the industry</p>
-                    </div>
-                    <div class="card">
-                        <img class="card-img" src="./images/planting_3.png" alt="planting">
-                        <h3 class="card-h3">Planting</h3>
-                        <p class="card-p">Lorem Ipsum has been the industry</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="prices">
-        <div class="prices-block containeer">
-            <div class="prices-choice">
-                <h2 class="prices-h2">Prices</h2>
-                <div class="choice">
-                    <div class="choice-rate">
-                        <p class="choice-rate-p">
-                            Basics
-                        </p>
-                        <div class="choice-rate-button"></div>
-                    </div>
-                    <div class="choice-rate">
-                        <p class="choice-rate-p">
-                            Standart
-                        </p>
-                        <div class="choice-rate-button"></div>
-                    </div>
-                    <div class="choice-rate">
-                        <p class="choice-rate-p">
-                            Pro care
-                        </p>
-                        <div class="choice-rate-button"></div>
-                    </div>
-                </div>
-            </div>
-            <div class="prices-help">
-                <p class="prices-help-p">Our best <span class="green-word">gardeners</span> are ready to help you</p>
-                <form class="prices-help-button">
-                    <button>Contact us</button>
-                </form>
-                <div class="prices-help-picture">
+    <main class="main">
+        <section class="welcome">
+            <div class="welcome-block containeer">
+                <div class="welcome-elements">
+                    <div class="welcome__picture">
                     
+                    </div>
+                    <div class="welcome__description">
+                        <h2 class="welcome__description-h2">We grow <span class="green-word">plants</span> and give you oxygen</h2>
+                        <p class="welcome__description-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                        </p>
+                        <form class="button">
+                            <button class="button-learn">Learn more</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="about" id="about">
+            <div class="about-block containeer">
+                <div class="about__elements">
+                    <div class="about__description">
+                        <h2 class="about__description-h2">We are<span class="orange-word"> professional experienced </span>gardeners</h2>
+                        <p class="about__description-p">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, 
+                            when an unknown printer took a galley of type and scrambled it to make a type 
+                            specimen book. It has survived not only five centuries, but also the leap into 
+                            electronic typesetting, remaining essentially unchanged.
+                        </p>
+                    </div>
+                    <div class="about__picture">
+    
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="service" id="service">
+            <div class="service-block containeer">
+                <div class="service-elements">
+                    <div class="service-elements__menu">
+                        <h2 class="service-elements-h2">Service and our projects</h2>
+                        <div class="controls">
+                            <form class="controls__button">
+                                <button class="button">Gardens</button>
+                            </form>
+                            <form class="controls__button">
+                                <button class="button">Lawn</button>
+                            </form>
+                            <form class="controls__button">
+                                <button class="button">Planting</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="service-elements__cards">
+                        <div class="card">
+                            <img class="card-img" src="./images/garden_care.png" alt="garden care">
+                            <h3 class="card-h3">Garden care</h3>
+                            <p class="card-p">Lorem Ipsum has been the industry</p>
+                        </div>
+                        <div class="card">
+                            <img class="card-img" src="./images/planting.png" alt="planting">
+                            <h3 class="card-h3">Planting</h3>
+                            <p class="card-p">Lorem Ipsum has been the industry</p>
+                        </div>
+                        <div class="card">
+                            <img class="card-img" src="./images/lawn_care.png" alt="lawn care">
+                            <h3 class="card-h3">Lawn care</h3>
+                            <p class="card-p">Lorem Ipsum has been the industry</p>
+                        </div>
+                        <div class="card">
+                            <img class="card-img" src="./images/planting_2.png" alt="planting">
+                            <h3 class="card-h3">Planting</h3>
+                            <p class="card-p">Lorem Ipsum has been the industry</p>
+                        </div>
+                        <div class="card">
+                            <img class="card-img" src="./images/garden_care2.png" alt="garden care">
+                            <h3 class="card-h3">Garden care</h3>
+                            <p class="card-p">Lorem Ipsum has been the industry</p>
+                        </div>
+                        <div class="card">
+                            <img class="card-img" src="./images/planting_3.png" alt="planting">
+                            <h3 class="card-h3">Planting</h3>
+                            <p class="card-p">Lorem Ipsum has been the industry</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="prices" id="prices">
+            <div class="prices-block containeer">
+                <div class="prices-choice">
+                    <h2 class="prices-h2">Prices</h2>
+                    <div class="choice">
+                        <div class="choice-rate">
+                            <p class="choice-rate-p">
+                                Basics
+                            </p>
+                            <div class="choice-rate-indicator">
+                                
+                            </div>
+                        </div>
+                        <div class="choice-rate">
+                            <p class="choice-rate-p">
+                                Standard
+                            </p>
+                            <div class="choice-rate-indicator">
+                                
+                            </div>
+                        </div>
+                        <div class="choice-rate">
+                            <p class="choice-rate-p">
+                                Pro care
+                            </p>
+                            <div class="choice-rate-indicator">
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="prices-help">
+                    <p class="prices-help-p">Our best <span class="green-word">gardeners</span> are ready to help you</p>
+                    <form class="prices-help-button">
+                        <button>Contact us</button>
+                    </form>
+                    <div class="prices-help-picture">
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="contacts" id="contacts">
+            <div class="contacts-block containeer">
+                <div class="contacts-picture">
+    
+                </div>
+                <h2 class="contacts-h2">Contact us</h2>
+                <div class="contacts-select">
+                    <p class="contacts-select-p">City</p>
+                    <div class="contacts-select-indicator"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <div class="footer-block containeer">
+            <div class="footer-block-information">
+                <div class="github">
+                    <p class="github-copyright">&#169</p>
+                    <p class="github-year">2022</p>
+                    <a class="github-link" href="https://github.com/IvanLomovtsev">github</a>
+                </div>
+                <div class="course-name">
+                    <a class=course-name-link href="https://rs.school/js-stage0/">Rolling Scopes School</a>
+                </div>
+                <div class="social">
+                    <a class="icon social-instagram" href="https://www.instagram.com/ivanlomovtcev/"></a>
+                    <a class="icon social-facebook" href="https://facebook.com/"></a>
+                    <a class="icon social-twitter" href="https://twitter.com/rollingscopes"></a>
+                    <a class="icon social-pinterest" href="https://pinterest.com/"></a>
                 </div>
             </div>
         </div>
-    </section>
-    <section class="contacts">
-        <div class="contacts-block containeer">
-            <div class="contacts-picture">
-
-            </div>
-            <div class="contacts-h2">
-
-            </div>
-            <div class="">
-
-            </div>
-        </div>
-    </section>
+    </footer>
 </body>
 </html>

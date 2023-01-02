@@ -1,15 +1,20 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables';
 
+//header
 $font-size-header: 1rem;
-$font-color-header: #010201;
-$padding-logo-img: 10px;
-$width-navigation: 37%;
+$color-header: #010201;
 $margin-header: 12.5%;
+
+//logo
+$padding-logo-img: 12%;
+
+//navigation
+$width-navigation: 37%;
 
 .header {
     background-color: variables.$color-primary;
-    color: $font-color-header;
+    color: $color-header;
     font-size: $font-size-header;
     .containeer {
         @include containeer();
@@ -35,9 +40,15 @@ $margin-header: 12.5%;
                 display: flex;
                 justify-content: space-between;
                 .navigation__elements-li {
+                    cursor: pointer;
                     margin: $margin-header 0;
                     a {
-                        color: $font-color-header;
+                        scroll-behavior: smooth;
+                        color: $color-header;
+                        transition: 0.2s linear;
+                        &:hover {
+                            color: variables.$color-orange;
+                        }
                     }
                 }
             }
