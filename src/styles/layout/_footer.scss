@@ -1,10 +1,40 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables';
 
+//footer
+$color-text: #000000;
+
+//information
+$margin-block-information: 50px;
+$font-size-block-information: 1.25rem;
+
+//github
+$width-github: 170px;
+
+//github-copyright 
+$width-copyright: 170px;
+
+//github-year
+$width-year: 49px;
+
+//github-link
+$width-github-link: 61px;
+
+//course-name 
+$width-course-name: 220px;
+$padding-course-name: 27px;
+
+//social
+$width-social: 188px;
+
+//social-icon
+$width-icon: 32px;
+$height-icon: 32px;
+
 .footer {
     background: variables.$color-secondary;
     font-family: Inter;
-    color: #000000;
+    color: $color-text;
     .containeer {
         @include containeer;
     }
@@ -14,24 +44,24 @@
             flex-direction: wrap;
             justify-content: space-between;
             align-items: center;
-            margin: 50px 0;
-            font-size: 1.25rem;
+            margin: $margin-block-information 0;
+            font-size: $font-size-block-information;
             .github {
                 margin: 0;
-                width: 170px;
+                width: $width-github;
                 display: flex;
                 justify-content: space-between;
                 .github-copyright {
                     margin: 0;
-                    width: 19px;
+                    width: $width-copyright;
                 }
                 .github-year {
                     margin: 0;
-                    width: 49px;
+                    width: $width-year;
                 }
                 .github-link {
                     margin: 0;
-                    width: 61px;
+                    width: $width-github-link;
                     color: #000000;
                     transition: 0.2s linear;
                     &:hover {
@@ -42,7 +72,7 @@
             .course-name {
                 margin: 0;
                 width: 220px;
-                padding-left: 27px;
+                padding-left: $padding-course-name;
                 .course-name-link {
                     color: #000000;
                     transition: 0.2s linear;
@@ -53,57 +83,47 @@
             }
             .social {
                 margin: 0;
-                width: 188px;
+                width: $width-social;
                 display: flex;
                 justify-content: space-between;
-                .social-instagramm {
+                .icon {
                     margin: 0;
-                    width: 32px;
-                    height: 32px;
+                    width: $width-icon;
+                    height: $height-icon;
+                    transition: 0.2s linear;
+                }
+                .social-instagram {
                     background-image: url("../icons/inst.svg");
                     background-size: 100%;
                     background-repeat: no-repeat;
                     background-position: center;
-                    transition: 0.2s linear;
                     &:hover {
                         background-image: url("../icons/inst-hover.svg");
                     }
                 }
                 .social-facebook {
-                    margin: 0;
-                    width: 32px;
-                    height: 32px;
                     background-image: url("../icons/fb.svg");
                     background-size: 100%;
                     background-repeat: no-repeat;
                     background-position: center;
-                    transition: 0.2s linear;
                     &:hover {
                         background-image: url("../icons/fb-hover.svg");
                     }
                 }
                 .social-twitter {
-                    margin: 0;
-                    width: 32px;
-                    height: 32px;
                     background-image: url("../icons/tw.svg");
                     background-size: 100%;
                     background-repeat: no-repeat;
                     background-position: center;
-                    transition: 0.2s linear;
                     &:hover {
                         background-image: url("../icons/tw-hover.svg");
                     }
                 }
                 .social-pinterest {
-                    margin: 0;
-                    width: 32px;
-                    height: 32px;
                     background-image: url("../icons/pinterest.svg");
                     background-size: 100%;
                     background-repeat: no-repeat;
                     background-position: center;
-                    transition: 0.2s linear;
                     &:hover {
                         background-image: url("../icons/pinterest-hover.svg");
                     }
