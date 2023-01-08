@@ -8,7 +8,7 @@ $font-size-button: 1.25rem;
 $border-radius-button: 5px;
 
 @mixin containeer() {
-    width: $width-containeer;
+    max-width: $width-containeer;
 }
 @mixin button (){
     width: $width-button;
