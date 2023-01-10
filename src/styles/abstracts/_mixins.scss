@@ -1,6 +1,6 @@
 @use "./variables";
 
-$width-containeer: 1222px;
+$width-containeer: 85%;
 
 $width-button: 161px;
 $padding-button: 11px;
@@ -8,7 +8,10 @@ $font-size-button: 1.25rem;
 $border-radius-button: 5px;
 
 @mixin containeer() {
-    max-width: $width-containeer;
+    width: $width-containeer;
+    @media screen and (max-width: 768px) and (min-width: 380px) {
+        width: 87%;
+    }
 }
 @mixin button (){
     width: $width-button;
