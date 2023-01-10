@@ -2,12 +2,12 @@
 @use '../abstracts/variables';
 
 //about
-$padding-about: 95px;
+$padding-about: 6.5%;
 
 //description
 $width-description: 50%;
 $width-description-h2: 80%;
-$padding-description-p: 40px;
+$padding-description-p: 5%;
 $line-height-description-p: 30px;
 $font-size-h2: 2.5rem;
 $font-size-description-p: 1.25rem;
@@ -22,14 +22,23 @@ $height-picture: 479px;
         @include containeer;
     }
     .about-block {
-        padding: $padding-about;
+        padding: $padding-about 0;
+        @media screen and (max-width: 1000px) and (min-width: 381px) {
+            padding: 5.5% 0 15%;
+        }
         .about__elements {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            @media screen and (max-width: 1000px) and (min-width: 381px) {
+                flex-direction: column;
+            }
             .about__description {
                 margin: 0;
                 width: $width-description;
+                @media screen and (max-width: 1000px) and (min-width: 381px) {
+                    width: 100%;
+                }
                 .about__description-h2 {
                     margin: 0;
                     width: $width-description-h2;
@@ -39,12 +48,29 @@ $height-picture: 479px;
                     .orange-word {
                         color: variables.$color-orange;
                     }
+                    @media screen and (max-width: 1000px) and (min-width: 381px) {
+                        margin: auto;
+                        text-align: center;
+                        width: 58%;
+                        font-weight: 400;
+                        font-size: 35px;
+                        line-height: 46px;
+                    }
+                    @media screen and (max-width: 768px) and (min-width: 381px) {
+                        font-size: calc(25px + 10*(100vw / 768));
+                    }
+                    @media screen and (max-width: 720px) and (min-width: 381px) {
+                        width: calc(381px + 10*(100vw / 720));
+                    }
                 }
                 .about__description-p {
                     padding-top: $padding-description-p;
                     font-family: Inter;
                     font-size: $font-size-description-p;
                     line-height: $line-height-description-p;
+                    @media screen and (max-width: 1000px) and (min-width: 381px) {
+                        padding: 7.5% 0 10%;
+                    }
                 }
             }
             .about__picture {
@@ -53,6 +79,14 @@ $height-picture: 479px;
                 height: $height-picture;
                 background-image: url('../images/houseplant.png');
                 background-size: cover;
+                @media screen and (max-width: 1250px) and (min-width: 1001px) {
+                    width: 40vw;
+                    height: 40vw;
+                }
+                @media screen and (max-width: 1000px) and (min-width: 381px) {
+                    width: 33vw;
+                    height: 33vw;
+                }
             }
         }
     }
