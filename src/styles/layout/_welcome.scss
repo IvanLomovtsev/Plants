@@ -36,23 +36,58 @@ $border-radius-welcome-button: 10px;
             justify-content: space-between;
             align-items: center;
             padding: $padding-welcome-elements 0;
+            @media screen and (max-width: 1000px) and (min-width: 769px) {
+                align-items: flex-start;
+            }
+            @media screen and (max-width: 768px) and (min-width: 381px) {
+                align-items: flex-start;
+                padding: 5.5% 0 10%;  
+                .welcome__picture {
+                    order: 2;
+                }
+                .welcome__description {
+                    order: 1;
+                }
+            }
             .welcome__picture {
                 width: $width-picture;    
                 height: $height-picture;
                 margin: 0;
                 background-image: url("../images/leafs.png");
                 background-size: cover;
+                @media screen and (max-width: 1250px) and (min-width: 769px) {
+                    width: 30vw;
+                    height: 25vw;
+                }
+                @media screen and (max-width: 768px) and (min-width: 551px) {
+                    width: 40vw;
+                    height: 30vw;
+                }
+                @media screen and (max-width: 550px) {
+                    display: none;
+                }
             }
             .welcome__description {
                 margin: 0;
                 width: $width-description;
                 font-family: Inter;
+                @media screen and (max-width: 1250px) and (min-width: 381px) {
+                    width: 60%;
+                }
+                @media screen and (max-width: 550px) and (min-width: 381px) {
+                    width: 100%;
+                }
                 .welcome__description-h2 {
                     font-size: $font-size-h2;
                     font-weight: 700;
                     letter-spacing: $letter-spacing-h2;
                     .green-word {
                         color: variables.$color-green;
+                    }
+                    @media screen and (max-width: 1000px) and (min-width: 381px) {
+                        font-size: 35px;
+                        line-height: 50px;
+                        letter-spacing: 0.8px;
                     }
                 }
                 .welcome__description-p {
@@ -61,6 +96,15 @@ $border-radius-welcome-button: 10px;
                     font-size: $font-size-description-p;
                     line-height: $line-height-description-p;
                     padding: $padding-description-p 0;
+                    @media screen and (max-width: 1000px) and (min-width: 769px) {
+                        font-size: calc(16px + 4*(100vw / 1000));
+                    }
+                    @media screen and (max-width: 768px) and (min-width: 381px) {
+                        width: 90%;
+                        padding: 8% 0;
+                        font-size: 1rem;
+                        line-height: 25px;
+                    }
                 }
                 .button {
                     margin-top: $margin-top-welcome-button;
