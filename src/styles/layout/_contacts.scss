@@ -5,8 +5,8 @@
 $padding-top: 53px;
 
 //contacts-picture
-$width-contact-picture: 33%;
-$height-contact-picture: 497px;
+$width-contact-picture: 22vw;
+$height-contact-picture: 27vw;
 
 //contacts-h2
 $width-contacts-h2: 20%;
@@ -43,12 +43,31 @@ $color-select-town-indicator: #AEA1A1;
         justify-content: space-between;
         align-items: flex-start;
         padding-top: $padding-top;
+        @media screen and (max-width: 1000px) and (min-width: 381px) {
+            padding-top: 4%;
+            flex-direction: column;
+            align-items: center;
+            .contacts-h2 {
+                order: 1;
+            }
+            .contacts-select {
+                order: 2;
+            }
+            .contacts-picture {
+                order: 3;
+            }
+        }
         .contacts-picture {
             margin: 0;
             width: $width-contact-picture;
             height: $height-contact-picture;
             background-image: url("../images/contact_woman.png");
             background-size: cover;
+            @media screen and (max-width: 1000px) and (min-width: 381px) {
+                margin-top: 22%;
+                width: 24vw;
+                height: 32.5vw;
+            }
         }
         .contacts-h2 {
             margin: 0;
@@ -59,6 +78,13 @@ $color-select-town-indicator: #AEA1A1;
             font-size: $font-size-contacts-h2;
             font-family: Inika;
             color: variables.$color-green;
+            @media screen and (max-width: 1150px) and (min-width: 1001px) {
+                width: 25%;
+            }
+            @media screen and (max-width: 1000px) and (min-width: 381px) {
+                width: 100%;
+                padding-left: 0;
+            }
         }
         .contacts-select {
             margin: $margin-contacts-select 0;
@@ -69,6 +95,10 @@ $color-select-town-indicator: #AEA1A1;
             align-items: center;
             padding: $padding-contacts-select 0;
             box-shadow: 0px $size-shadow $size-shadow $color-shadow;
+            @media screen and (max-width: 1000px) and (min-width: 381px) {
+                width: 67.5%;
+                margin: 15%;
+            }
             .contacts-select-p {
                 margin: 0;
                 font-size: $font-size-contacts-select-p;
