@@ -36,11 +36,26 @@ $border-radius-card: 20px;
                 flex-wrap: wrap;
                 align-items: center;
                 margin-bottom: $margin-service-menu;
+                @media screen and (max-width: 900px) and (min-width: 381px) {
+                    display: block;
+                }
                 .service-elements-h2 {
                     width: $width-h2;
                     margin: 0;
                     font-size: $font-size-h2;
+                    font-weight: 400;
                     color: variables.$color-green;
+                    @media screen and (max-width: 1000px) and (min-width: 769px) {
+                        font-size: 35px;
+                    }
+                    @media screen and (max-width: 900px) and (min-width: 381px) {
+                        width: 50%; 
+                        margin: 3% 0 6.5%;
+                    }
+                    @media screen and (max-width: 768px) and (min-width: 381px) {
+                        font-size: calc(25px + 10*(100vw / 768));
+                        line-height: 46px;
+                    }
                 }
                 .controls {
                     width: $width-controls;
@@ -51,6 +66,30 @@ $border-radius-card: 20px;
                     .button {
                         @include button()
                     }
+                    @media screen and (max-width: 1200px) and (min-width: 1001px) {
+                        width: 60%;
+                    }
+                    @media screen and (max-width: 1000px) and (min-width: 901px) {
+                        margin: 0;
+                        width: 70%;
+                    }
+                    @media screen and (max-width: 900px) and (min-width: 700px) {
+                        width: 83%;
+                        margin: 0;
+                        .controls__button {
+                            margin: 0;
+                        }
+                    }
+                    @media screen and (max-width: 700px) and (min-width: 381px) {
+                        width: 83%;
+                        margin: 0;
+                        flex-wrap: wrap;
+                        justify-content: start;
+                        .controls__button {
+                            margin: 1%;
+                            margin-right: 2%;
+                        }
+                    }
                 }
             }
             .service-elements__cards {
@@ -59,14 +98,30 @@ $border-radius-card: 20px;
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
+                @media screen and (max-width: 900px) and (min-width: 381px) {
+                    margin-bottom: 2%;
+                }
                 .card {
                     margin: 0;
                     margin-top: $margin-top-card;
                     width: 27%;
                     border: 1px solid $border-color-card;
                     border-radius: $border-radius-card;
+                    @media screen and (max-width: 1200px) and (min-width: 901px) {
+                        width: 32%; 
+                    }
+                    @media screen and (max-width: 900px) and (min-width: 381px) {
+                        width: 42%; 
+                        margin: 2% 0 3.5%;
+                    }
                     .card-img {
+                        width: 100%;
                         display: block;
+                        margin-bottom: $margin-bottom-card-img;
+                    }
+                    .card-img-mob {
+                        width: 100%;
+                        display: none;
                         margin-bottom: $margin-bottom-card-img;
                     }
                     .card-h3 {
@@ -80,6 +135,18 @@ $border-radius-card: 20px;
                         text-align: center;
                         font-family: Inter;
                         padding: $padding-top-card-p 0 $padding-bottom-card-p;
+                    }   
+                    @media screen and (max-width: 768px) and (min-width: 381px) {
+                        .card-p {
+                            width: 75%;
+                            padding: 2% 0 7%;
+                        }
+                        .card-img {
+                            display: none;
+                        }
+                        .card-img-mob {
+                            display: block;
+                        }
                     }
                 }
             }
