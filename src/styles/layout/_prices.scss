@@ -50,7 +50,7 @@ $height-prices-help-picture: 175px;
         justify-content: space-between;
         padding: $padding-prices-top 0 $padding-prices-bottom;
         @media screen and (max-width: 768px) and (min-width: 381px) {
-            padding: 3.5% 0;
+            padding: 3.5% 0 13%;
         }
         .prices-choice {
             width: $width-prices-choice;
