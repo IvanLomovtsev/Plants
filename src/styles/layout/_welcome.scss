@@ -36,12 +36,9 @@ $border-radius-welcome-button: 10px;
             justify-content: space-between;
             align-items: center;
             padding: $padding-welcome-elements 0;
-            @media screen and (max-width: 1000px) and (min-width: 769px) {
+            @media screen and (max-width: 1200px) {
                 align-items: flex-start;
-            }
-            @media screen and (max-width: 768px) and (min-width: 381px) {
-                align-items: flex-start;
-                padding: 5.5% 0 10%;  
+                padding: 5.5% 0 7%;  
                 .welcome__picture {
                     order: 2;
                 }
@@ -55,7 +52,7 @@ $border-radius-welcome-button: 10px;
                 margin: 0;
                 background-image: url("../images/leafs.png");
                 background-size: cover;
-                @media screen and (max-width: 1250px) and (min-width: 769px) {
+                @media screen and (max-width: 1200px) and (min-width: 769px) {
                     width: 30vw;
                     height: 25vw;
                 }
@@ -71,10 +68,10 @@ $border-radius-welcome-button: 10px;
                 margin: 0;
                 width: $width-description;
                 font-family: Inter;
-                @media screen and (max-width: 1250px) and (min-width: 381px) {
+                @media screen and (max-width: 1250px) {
                     width: 60%;
                 }
-                @media screen and (max-width: 550px) and (min-width: 381px) {
+                @media screen and (max-width: 550px) {
                     width: 100%;
                 }
                 .welcome__description-h2 {
@@ -84,15 +81,16 @@ $border-radius-welcome-button: 10px;
                     .green-word {
                         color: variables.$color-green;
                     }
-                    @media screen and (max-width: 1000px) and (min-width: 769px) {
+                    @media screen and (max-width: 1000px) and (min-width: 768px) {
                         font-size: 35px;
                         line-height: 50px;
                         letter-spacing: 0.8px;
                     }
-                    @media screen and (max-width: 768px) and (min-width: 381px) {
-                        font-size: calc(25px + 10*(100vw / 768));
-                        line-height: 50px;
-                        letter-spacing: 0.8px;
+                    @media screen and (max-width: 767px) {
+                        margin-top: 10px;
+                        font-size: 25px;
+                        line-height: 35px;
+                        letter-spacing: 0.5px;
                     }
                 }
                 .welcome__description-p {
@@ -101,12 +99,15 @@ $border-radius-welcome-button: 10px;
                     font-size: $font-size-description-p;
                     line-height: $line-height-description-p;
                     padding: $padding-description-p 0;
-                    @media screen and (max-width: 1000px) and (min-width: 769px) {
-                        font-size: calc(16px + 4*(100vw / 1000));
-                    }
-                    @media screen and (max-width: 768px) and (min-width: 381px) {
+                    @media screen and (max-width: 1000px) and (min-width: 768px) {
                         width: 90%;
                         padding: 8% 0;
+                        line-height: 25px;
+                        font-size: calc(16px + 4*(100vw / 1000));
+                    }
+                    @media screen and (max-width: 767px) {
+                        width: 100%;
+                        padding: 6.5% 0;
                         font-size: 1rem;
                         line-height: 25px;
                     }
@@ -127,6 +128,11 @@ $border-radius-welcome-button: 10px;
                         &:hover {
                             color: variables.$color-secondary;
                             background-color: variables.$color-orange;
+                        }
+                        @media screen and (max-width: 767px) {
+                            width: 30.5%;
+                            padding: 3% 0;
+                            font-size: 10px;
                         }
                     }
                 }

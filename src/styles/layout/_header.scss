@@ -39,7 +39,7 @@ $width-menu: 37%;
         .header__menu {
             width: $width-menu;
                 margin-right: 0;
-                @media screen and (max-width: 1000px) and (min-width: 768px) {
+                @media screen and (max-width: 1200px) and (min-width: 768px) {
                     width: 68%;
                 }
                 @media screen and (max-width: 767px) and (min-width: 501px) {
@@ -131,7 +131,7 @@ $width-menu: 37%;
                     .navigation__elements-li {
                         cursor: pointer;
                         margin: $margin-header 0;
-                        @media screen and (max-width: 1000px) and (min-width: 768px) {
+                        @media screen and (max-width: 1200px) and (min-width: 768px) {
                             margin: 11% 0;
                         }
                         @media screen and (max-width: 767px) {
