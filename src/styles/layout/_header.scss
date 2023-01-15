@@ -9,8 +9,8 @@ $margin-header: 12.5%;
 //logo
 $padding-logo-img: 12%;
 
-//navigation
-$width-navigation: 37%;
+//menu
+$width-menu: 37%;
 
 .header {
     background-color: variables.$color-primary;
@@ -32,37 +32,145 @@ $width-navigation: 37%;
             .logo__img {
                 padding-bottom: $padding-logo-img;
             }
+            @media screen and (max-width: 767px) {
+                margin-top: 11%;
+            }
         }
-        .navigation {
-            width: $width-navigation;
-            margin-right: 0;
-            @media screen and (max-width: 1000px) and (min-width: 769px) {
-                width: 50%;
-            }
-            @media screen and (max-width: 768px) and (min-width: 501px) {
-                width: 68%;
-            }
-            @media screen and (max-width: 500px) and (min-width: 381px) {
-                width: 80%;
-            }
-            .navigation__elements {
-                display: flex;
-                justify-content: space-between;
-                .navigation__elements-li {
+        .header__menu {
+            width: $width-menu;
+                margin-right: 0;
+                @media screen and (max-width: 1200px) and (min-width: 768px) {
+                    width: 68%;
+                }
+                @media screen and (max-width: 767px) and (min-width: 501px) {
+                    width: 10.5vw;
+                    margin: 10% 0;
+                }
+                @media screen and (max-width: 500px) {
+                    width: 10.5vw;
+                    margin: 10% 0;
+                }
+            .menu__icon {
+                display: none;              
+                @media screen and (max-width: 767px) {
+                    position: relative;
+                    display: block;
+                    width: 40px;
+                    height: 26px;
                     cursor: pointer;
-                    margin: $margin-header 0;
-                    @media screen and (max-width: 768px) and (min-width: 381px) {
-                        margin: 11% 0;
+                }
+            }
+            .menu__icon span, 
+            .menu__icon::before, 
+            .menu__icon::after {
+                @media screen and (max-width: 767px) {
+                    left: 0;
+                    position: absolute;
+                    width: 100%;
+                    height: 2px;
+                    transition: all 0.3s ease 0s;
+                    background-color: variables.$color-text;
+                }
+            }
+            .menu__icon::before, 
+            .menu__icon::after {
+                @media screen and (max-width: 767px) {
+                    content: "";
+                }
+            }
+            .menu__icon::before {
+                @media screen and (max-width: 767px) {
+                    top: 0;
+                }
+            }
+            .menu__icon::after {
+                @media screen and (max-width: 767px) {
+                    bottom: 0;
+                }
+            }
+            .menu__icon .second-line {
+                @media screen and (max-width: 767px) {
+                    top: 8px;
+                    transform: scale(1) translate(0px, -50%);
+                }
+            }
+            .menu__icon .third-line {
+                @media screen and (max-width: 767px) {
+                    top: 16px;
+                    transform: scale(1) translate(0px, -50%);
+                }
+            }
+            .menu__icon.active span{
+                transform: scale(0) translate(0px, -50%);
+            }
+            .menu__icon.active::before{
+                top: 12px;
+                transform: rotate(-45deg) translate(0px, -50%);
+            }
+            .menu__icon.active::after{
+                top: 11px;
+                transform: rotate(45deg) translate(0px, 50%);
+            }
+
+            .menu__navigation {
+                @media screen and (max-width: 767px) {
+                    position: absolute;
+                    width: 100%;
+                    top:21vw;
+                    left: -100%;
+                    background-color: variables.$color-primary;
+                    transition: 0.5s linear;
+                }
+                .navigation__elements {
+                    display: flex;
+                    justify-content: space-between;
+                    @media screen and (max-width: 767px) {
+                        flex-direction: column;
+                        align-items: center;
                     }
-                    a {
-                        scroll-behavior: smooth;
-                        color: $color-header;
-                        transition: 0.2s linear;
-                        &:hover {
-                            color: variables.$color-orange;
+                    .navigation__elements-li {
+                        cursor: pointer;
+                        margin: $margin-header 0;
+                        @media screen and (max-width: 1200px) and (min-width: 768px) {
+                            margin: 11% 0;
+                        }
+                        @media screen and (max-width: 767px) {
+                            margin: 0;
+                            width: 100%;
+                        }
+                        a {
+                            scroll-behavior: smooth;
+                            color: $color-header;
+                            transition: 0.2s linear;
+                            &:hover {
+                                color: variables.$color-orange;
+                            }
+                            @media screen and (max-width: 767px) {
+                                display: block;
+                                width: 100%;
+                                padding: 4% 0;
+                                margin: 0;
+                                text-align: center;
+                                border-top: 2px solid variables.$color-orange;
+                                cursor: pointer;
+                                &:hover {
+                                    color: variables.$color-secondary;
+                                    background-color: variables.$color-orange
+                                }
+                            }
+                        }
+                    }
+                    .navigation__elements-li:last-child {
+                        @media screen and (max-width: 767px) {
+                            a {
+                                border-bottom: 2px solid variables.$color-orange;
+                            }
                         }
                     }
                 }
+            }
+            .active {
+                left: 0;
             }
         }
     }
