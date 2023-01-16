@@ -38,7 +38,7 @@ $border-radius-welcome-button: 10px;
             padding: $padding-welcome-elements 0;
             @media screen and (max-width: 1200px) {
                 align-items: flex-start;
-                padding: 5.5% 0 7%;  
+                padding: 5.5% 0 10%;     
                 .welcome__picture {
                     order: 2;
                 }
@@ -46,17 +46,20 @@ $border-radius-welcome-button: 10px;
                     order: 1;
                 }
             }
+            @media screen and (max-width: 1200px) {
+                padding: 5.5% 0 7%;
+            }
             .welcome__picture {
                 width: $width-picture;    
                 height: $height-picture;
                 margin: 0;
                 background-image: url("../images/leafs.png");
                 background-size: cover;
-                @media screen and (max-width: 1200px) and (min-width: 769px) {
-                    width: 30vw;
-                    height: 25vw;
+                @media screen and (max-width: 1200px) and (min-width: 768px) {
+                    width: 37vw;
+                    height: 34vw;
                 }
-                @media screen and (max-width: 768px) and (min-width: 551px) {
+                @media screen and (max-width: 767px) and (min-width: 551px) {
                     width: 40vw;
                     height: 35vw;
                 }
@@ -68,10 +71,10 @@ $border-radius-welcome-button: 10px;
                 margin: 0;
                 width: $width-description;
                 font-family: Inter;
-                @media screen and (max-width: 1250px) {
-                    width: 60%;
+                @media screen and (max-width: 1250px) and (min-width: 768px) {
+                    width: 55%;
                 }
-                @media screen and (max-width: 550px) {
+                @media screen and (max-width: 767px) {
                     width: 100%;
                 }
                 .welcome__description-h2 {
@@ -102,8 +105,9 @@ $border-radius-welcome-button: 10px;
                     @media screen and (max-width: 1000px) and (min-width: 768px) {
                         width: 90%;
                         padding: 8% 0;
+                        padding-left: 1%;
                         line-height: 25px;
-                        font-size: calc(16px + 4*(100vw / 1000));
+                        font-size: calc(15.5px + (100vw / 1000));
                     }
                     @media screen and (max-width: 767px) {
                         width: 100%;

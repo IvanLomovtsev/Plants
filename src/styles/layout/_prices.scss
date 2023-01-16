@@ -50,7 +50,7 @@ $height-prices-help-picture: 175px;
         justify-content: space-between;
         padding: $padding-prices-top 0 $padding-prices-bottom;
         @media screen and (max-width: 1200px) and (min-width: 768px) {
-            padding: 3.5% 0 13%;
+            padding: 3.5% 0 12%;
         }
         @media screen and (max-width: 767px) {
             display: block;
@@ -63,6 +63,9 @@ $height-prices-help-picture: 175px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            @media screen and (max-width: 1200px) and (min-width: 768px) {
+                width: 50%;
+            }
             @media screen and (max-width: 767px) {
                 margin: auto;
                 width: 100%;
@@ -73,6 +76,7 @@ $height-prices-help-picture: 175px;
                 color: $color-prices;
                 @media screen and (max-width: 1200px) and (min-width: 768px) {
                     font-size: 35px;
+                    margin-left: 4.5%;
                 }
                 @media screen and (max-width: 767px) {
                     font-size: calc(25px + (100vw / 767));
@@ -143,7 +147,7 @@ $height-prices-help-picture: 175px;
             align-items: flex-end;
             @media screen and (max-width: 1200px) {
                 margin-top: 15%;
-                width: 42%;
+                width: 45%;
             }
             @media screen and (max-width: 767px) {
                 margin: auto;
@@ -162,7 +166,8 @@ $height-prices-help-picture: 175px;
                     color: variables.$color-green;
                 }
                 @media screen and (max-width: 1000px) and (min-width: 768px) {
-                    font-size: calc(24px + 10*(100vw / 1000));
+                    width: 100%;
+                    font-size: calc(24px + (100vw / 1000));
                     line-height: 35px;
                 }
                 @media screen and (max-width: 767px) {
