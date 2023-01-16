@@ -49,8 +49,13 @@ $height-prices-help-picture: 175px;
         flex-wrap: wrap;
         justify-content: space-between;
         padding: $padding-prices-top 0 $padding-prices-bottom;
-        @media screen and (max-width: 768px) and (min-width: 381px) {
+        @media screen and (max-width: 1200px) and (min-width: 768px) {
             padding: 3.5% 0 13%;
+        }
+        @media screen and (max-width: 767px) {
+            display: block;
+            margin: auto;
+            padding: 6.5% 0 5%;
         }
         .prices-choice {
             width: $width-prices-choice;
@@ -58,16 +63,20 @@ $height-prices-help-picture: 175px;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            @media screen and (max-width: 767px) {
+                margin: auto;
+                width: 100%;
+            }
             .prices-h2 {
                 margin: 0 0 $margin-h2;
                 font-size: $font-size-h2;
                 color: $color-prices;
-                @media screen and (max-width: 1000px) and (min-width: 769px) {
+                @media screen and (max-width: 1200px) and (min-width: 768px) {
                     font-size: 35px;
                 }
-                @media screen and (max-width: 768px) and (min-width: 381px) {
-                    font-size: calc(27px + 10*(100vw / 1000));
-                    padding-left: 5%;
+                @media screen and (max-width: 767px) {
+                    font-size: calc(25px + (100vw / 767));
+                    margin: auto;
                 }
             }
             .choice {
@@ -76,6 +85,12 @@ $height-prices-help-picture: 175px;
                 padding: $padding-choice;
                 border-radius: $border-radius-choice;
                 border: 1px solid $color-primary;
+                @media screen and (max-width: 767px) {
+                    margin: auto;
+                    width: 67%;
+                    margin-top: 11%;
+                    padding: 5% 0;
+                }
                 .choice-rate {
                     display: flex;
                     flex-direction: wrap;
@@ -85,12 +100,25 @@ $height-prices-help-picture: 175px;
                     margin-top: $margin-choice-rate;
                     border-radius: $border-radius-choice;
                     background-color: $color-primary;
+                    margin-bottom: $margin-choice-rate;
+                    @media screen and (max-width: 767px) {
+                        width: 82%;
+                        margin: 5.5% auto;
+                    }
                     .choice-rate-p {
                         margin: 0;
                         color: $color-prices;
                         font-weight: 700;
                         font-size: $font-size-choice-rate-p;
-                        padding: $padding-choice-rate-p 0 $padding-choice-rate-p calc($padding-choice-rate-p*3.1);  
+                        padding: $padding-choice-rate-p 0 $padding-choice-rate-p calc($padding-choice-rate-p*3.1); 
+                        @media screen and (max-width: 767px) {
+                            width: 55%;
+                            padding: 8.5% 0;
+                            padding-left: 18%;
+                            font-weight: 700;
+                            font-size: 15px;
+                            line-height: 20px;
+                        }
                     }
                     .choice-rate-indicator {
                         border-radius: $border-radius-choice-rate-indicator;
@@ -105,9 +133,6 @@ $height-prices-help-picture: 175px;
                         background-position: center;
                     }
                 }
-                .choice-rate {
-                    margin-bottom: $margin-choice-rate;
-                }
             }
         }
         .prices-help {
@@ -116,9 +141,14 @@ $height-prices-help-picture: 175px;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
-            @media screen and (max-width: 1000px) and (min-width: 381px) {
+            @media screen and (max-width: 1200px) {
                 margin-top: 15%;
                 width: 42%;
+            }
+            @media screen and (max-width: 767px) {
+                margin: auto;
+                margin-top: 5.5%;
+                width: 100%;
             }
             .prices-help-p {
                 width: $width-prices-help-p;
@@ -131,11 +161,15 @@ $height-prices-help-picture: 175px;
                 .green-word {
                     color: variables.$color-green;
                 }
-                @media screen and (max-width: 1000px) and (min-width: 769px) {
+                @media screen and (max-width: 1000px) and (min-width: 768px) {
                     font-size: calc(24px + 10*(100vw / 1000));
+                    line-height: 35px;
                 }
-                @media screen and (max-width: 768px) and (min-width: 381px) {
-                    font-size: calc(19px + 5*(100vw / 768));
+                @media screen and (max-width: 767px) {
+                    width: 70%;
+                    margin: auto;
+                    text-align: center;
+                    font-size: calc(19px + (100vw / 768));
                     line-height: 35px;
                 }
             }
@@ -144,9 +178,17 @@ $height-prices-help-picture: 175px;
                 button {
                     @include button;
                     background-color: variables.$color-secondary;
+                    @media screen and (max-width: 700px) {
+                        width: 121px;
+                        font-size: 15px;
+                        padding: 7px 0;
+                    }
                 }
-                @media screen and (max-width: 768px) and (min-width: 381px) {
+                @media screen and (max-width: 1200px) and (min-width: 701px) {
                     margin: 9% 0;
+                }
+                @media screen and (max-width: 700px) {
+                    margin: 6% auto;
                 }
             }
             .prices-help-picture {
@@ -155,6 +197,9 @@ $height-prices-help-picture: 175px;
                 margin: 0;
                 background-image: url("../images/leafs_mini.png");
                 background-size: cover;
+                @media screen and (max-width: 767px) {
+                    display: none;
+                }
             }
         }
     }
