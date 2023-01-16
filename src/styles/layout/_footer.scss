@@ -46,9 +46,13 @@ $height-icon: 32px;
             align-items: center;
             margin: $margin-block-information 0;
             font-size: $font-size-block-information;
-            @media screen and (max-width: 768px) and (min-width: 381px) {
+            @media screen and (max-width: 768px) and (min-width: 768px) {
                 flex-direction: column;
                 margin: 5%;
+            }
+            @media screen and (max-width: 767px) {
+                flex-direction: column;
+                margin: 7%;
             }
             .github {
                 margin: 0;
@@ -84,9 +88,14 @@ $height-icon: 32px;
                         color: variables.$color-orange;
                     }
                 }
-                @media screen and (max-width: 768px) and (min-width: 381px) {
+                @media screen and (max-width: 1200px) and (min-width: 768px) {
                     padding-left: 0;
                     margin: 3% 0 4%;
+                    text-align: center;
+                }
+                @media screen and (max-width: 767px) {
+                    padding-left: 0;
+                    margin: 5% 0;
                     text-align: center;
                 }
             }
