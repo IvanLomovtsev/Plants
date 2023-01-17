@@ -7,6 +7,6 @@ html {
     font-family: Inika;
     color: variables.$color-text;
     body {
-        width: $body-width;
+        max-width: $body-width;
     }
 }

@@ -12,18 +12,24 @@
         <div class="header-block containeer">
             <h1 class="header-block__h1">Plants</h1>
             <div class="logo">
-                <img class="logo__img" src="./icons/logo_vector.png" als="logo of Plants">
-                <p class="logo__name">Plants</p>
+                <img class="logo__img" src="./icons/logo_vector.png" alt="logo of Plants">
+                <p id="first" class="logo__name">Plants</p>
             </div>
-            <nav class="navigation">
-                <ul class="navigation__elements">
-                    <li class="navigation__elements-li"><a href="#home">Home</a></li>
-                    <li class="navigation__elements-li"><a href="#about">About us</a></li>
-                    <li class="navigation__elements-li"><a href="#service">Service</a></li>
-                    <li class="navigation__elements-li"><a href="#price">Price</a></li>
-                    <li class="navigation__elements-li"><a href="#contacts">Contacts</a></li>
-                </ul>
-            </nav>
+            <div class="header__menu">
+                <div class="menu__icon">
+                    <span class="second-line"></span>
+                    <span class="third-line"></span>
+                </div>
+                <nav class="menu__navigation">
+                    <ul class="navigation__elements">
+                        <li class="navigation__elements-li"><a href="#home">Home</a></li>
+                        <li class="navigation__elements-li"><a href="#about">About us</a></li>
+                        <li class="navigation__elements-li"><a href="#service">Service</a></li>
+                        <li class="navigation__elements-li"><a href="#price">Price</a></li>
+                        <li class="navigation__elements-li"><a href="#contacts">Contacts</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
     <main class="main">
@@ -83,31 +89,37 @@
                     <div class="service-elements__cards">
                         <div class="card">
                             <img class="card-img" src="./images/garden_care.png" alt="garden care">
+                            <img class="card-img-mob" src="./images/garden_care_mob.png" alt="garden care">
                             <h3 class="card-h3">Garden care</h3>
                             <p class="card-p">Lorem Ipsum has been the industry</p>
                         </div>
                         <div class="card">
                             <img class="card-img" src="./images/planting.png" alt="planting">
+                            <img class="card-img-mob" src="./images/planting_mob.png" alt="planting">
                             <h3 class="card-h3">Planting</h3>
                             <p class="card-p">Lorem Ipsum has been the industry</p>
                         </div>
                         <div class="card">
                             <img class="card-img" src="./images/lawn_care.png" alt="lawn care">
+                            <img class="card-img-mob" src="./images/lawn_care_mob.png" alt="lawn care">
                             <h3 class="card-h3">Lawn care</h3>
                             <p class="card-p">Lorem Ipsum has been the industry</p>
                         </div>
                         <div class="card">
                             <img class="card-img" src="./images/planting_2.png" alt="planting">
+                            <img class="card-img-mob" src="./images/planting_2_mob.png" alt="planting">
                             <h3 class="card-h3">Planting</h3>
                             <p class="card-p">Lorem Ipsum has been the industry</p>
                         </div>
                         <div class="card">
                             <img class="card-img" src="./images/garden_care2.png" alt="garden care">
+                            <img class="card-img-mob" src="./images/garden_care2_mob.png" alt="garden care">
                             <h3 class="card-h3">Garden care</h3>
                             <p class="card-p">Lorem Ipsum has been the industry</p>
                         </div>
                         <div class="card">
                             <img class="card-img" src="./images/planting_3.png" alt="planting">
+                            <img class="card-img-mob" src="./images/planting_3_mob.png" alt="planting">
                             <h3 class="card-h3">Planting</h3>
                             <p class="card-p">Lorem Ipsum has been the industry</p>
                         </div>
@@ -115,7 +127,7 @@
                 </div>
             </div>
         </section>
-        <section class="prices" id="prices">
+        <section class="prices" id="price">
             <div class="prices-block containeer">
                 <div class="prices-choice">
                     <h2 class="prices-h2">Prices</h2>
@@ -148,7 +160,7 @@
                 </div>
                 <div class="prices-help">
                     <p class="prices-help-p">Our best <span class="green-word">gardeners</span> are ready to help you</p>
-                    <form class="prices-help-button">
+                    <form class="prices-help-button" action="#contacts">
                         <button>Contact us</button>
                     </form>
                     <div class="prices-help-picture">
@@ -174,7 +186,7 @@
         <div class="footer-block containeer">
             <div class="footer-block-information">
                 <div class="github">
-                    <p class="github-copyright">&#169</p>
+                    <p class="github-copyright">&#169;</p>
                     <p class="github-year">2022</p>
                     <a class="github-link" href="https://github.com/IvanLomovtsev">github</a>
                 </div>
@@ -189,6 +201,6 @@
                 </div>
             </div>
         </div>
-    </footer>
+    </footer> 
 </body>
 </html>

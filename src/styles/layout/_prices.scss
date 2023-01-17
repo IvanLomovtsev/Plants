@@ -6,7 +6,7 @@ $padding-prices-top: 42px;
 $padding-prices-bottom: 105px;
 
 //choice
-$width-prices-choice: 26.8%;
+$width-prices-choice: 45%;
 
 //prices-h2
 $margin-h2: 60px;
@@ -15,7 +15,7 @@ $color-prices: #000000;
 
 //choice
 $border-radius-choice: 20px;
-$width-choice: 100%;
+$width-choice: 332px;
 $padding-choice: 2px;
 $border-radius-choice: 20px;
 $width-choice-rate: 76%;
@@ -31,7 +31,8 @@ $size-choice-rate-indicator: 16px;
 $color-choice-rate-indicator: #D9D9D9;
 
 //help
-$width-prices-help-p: 70%;
+$width-prices-help: 40%;
+$width-prices-help-p: 100%;
 $size-prices-help-p: 2.5rem;
 $letter-spacing-prices-help-p: 0.6px;
 $width-prices-help-picture: 152px;
@@ -48,16 +49,39 @@ $height-prices-help-picture: 175px;
         flex-wrap: wrap;
         justify-content: space-between;
         padding: $padding-prices-top 0 $padding-prices-bottom;
+        @media screen and (max-width: 1200px) and (min-width: 768px) {
+            padding: 3.5% 0 12%;
+        }
+        @media screen and (max-width: 767px) {
+            display: block;
+            margin: auto;
+            padding: 6.5% 0 5%;
+        }
         .prices-choice {
             width: $width-prices-choice;
             margin: 0;
             display: flex;
             flex-direction: column;
             align-items: flex-start;
+            @media screen and (max-width: 1200px) and (min-width: 768px) {
+                width: 50%;
+            }
+            @media screen and (max-width: 767px) {
+                margin: auto;
+                width: 100%;
+            }
             .prices-h2 {
                 margin: 0 0 $margin-h2;
                 font-size: $font-size-h2;
                 color: $color-prices;
+                @media screen and (max-width: 1200px) and (min-width: 768px) {
+                    font-size: 35px;
+                    margin-left: 4.5%;
+                }
+                @media screen and (max-width: 767px) {
+                    font-size: calc(25px + (100vw / 767));
+                    margin: auto;
+                }
             }
             .choice {
                 width: $width-choice;
@@ -65,6 +89,12 @@ $height-prices-help-picture: 175px;
                 padding: $padding-choice;
                 border-radius: $border-radius-choice;
                 border: 1px solid $color-primary;
+                @media screen and (max-width: 767px) {
+                    margin: auto;
+                    width: 67%;
+                    margin-top: 11%;
+                    padding: 5% 0;
+                }
                 .choice-rate {
                     display: flex;
                     flex-direction: wrap;
@@ -74,12 +104,25 @@ $height-prices-help-picture: 175px;
                     margin-top: $margin-choice-rate;
                     border-radius: $border-radius-choice;
                     background-color: $color-primary;
+                    margin-bottom: $margin-choice-rate;
+                    @media screen and (max-width: 767px) {
+                        width: 82%;
+                        margin: 5.5% auto;
+                    }
                     .choice-rate-p {
                         margin: 0;
                         color: $color-prices;
                         font-weight: 700;
                         font-size: $font-size-choice-rate-p;
-                        padding: $padding-choice-rate-p 0 $padding-choice-rate-p calc($padding-choice-rate-p*3.1);  
+                        padding: $padding-choice-rate-p 0 $padding-choice-rate-p calc($padding-choice-rate-p*3.1); 
+                        @media screen and (max-width: 767px) {
+                            width: 55%;
+                            padding: 8.5% 0;
+                            padding-left: 18%;
+                            font-weight: 700;
+                            font-size: 15px;
+                            line-height: 20px;
+                        }
                     }
                     .choice-rate-indicator {
                         border-radius: $border-radius-choice-rate-indicator;
@@ -94,16 +137,23 @@ $height-prices-help-picture: 175px;
                         background-position: center;
                     }
                 }
-                .choice-rate {
-                    margin-bottom: $margin-choice-rate;
-                }
             }
         }
         .prices-help {
+            width: $width-prices-help;
             margin: 0;
             display: flex;
             flex-direction: column;
             align-items: flex-end;
+            @media screen and (max-width: 1200px) {
+                margin-top: 15%;
+                width: 45%;
+            }
+            @media screen and (max-width: 767px) {
+                margin: auto;
+                margin-top: 5.5%;
+                width: 100%;
+            }
             .prices-help-p {
                 width: $width-prices-help-p;
                 margin: 0;
@@ -115,20 +165,46 @@ $height-prices-help-picture: 175px;
                 .green-word {
                     color: variables.$color-green;
                 }
+                @media screen and (max-width: 1000px) and (min-width: 768px) {
+                    width: 100%;
+                    font-size: calc(24px + (100vw / 1000));
+                    line-height: 35px;
+                }
+                @media screen and (max-width: 767px) {
+                    width: 70%;
+                    margin: auto;
+                    text-align: center;
+                    font-size: calc(19px + (100vw / 768));
+                    line-height: 35px;
+                }
             }
             .prices-help-button {
                 margin: 44px 0;
                 button {
                     @include button;
                     background-color: variables.$color-secondary;
+                    @media screen and (max-width: 700px) {
+                        width: 121px;
+                        font-size: 15px;
+                        padding: 7px 0;
+                    }
+                }
+                @media screen and (max-width: 1200px) and (min-width: 701px) {
+                    margin: 9% 0;
+                }
+                @media screen and (max-width: 700px) {
+                    margin: 6% auto;
                 }
             }
             .prices-help-picture {
                 width: $width-prices-help-picture;
                 height: $height-prices-help-picture;
                 margin: 0;
-                background-image: url("../images/leafs.png");
+                background-image: url("../images/leafs_mini.png");
                 background-size: cover;
+                @media screen and (max-width: 767px) {
+                    display: none;
+                }
             }
         }
     }
