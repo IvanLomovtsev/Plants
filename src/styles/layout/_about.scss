@@ -24,7 +24,7 @@ $height-picture: 479px;
     .about-block {
         padding: $padding-about 0;
         @media screen and (max-width: 1000px) and (min-width: 768px) {
-            padding: 5.5% 0 15%;
+            padding: 5% 0 15%;
         }
         @media screen and (max-width: 767px) {
             padding: 7.5% 0 8%;
