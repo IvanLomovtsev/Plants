@@ -38,7 +38,7 @@ $border-radius-welcome-button: 10px;
             padding: $padding-welcome-elements 0;
             @media screen and (max-width: 1200px) {
                 align-items: flex-start;
-                padding: 5.5% 0 10%;     
+                padding: 5.5% 0 10.5%;     
                 .welcome__picture {
                     order: 2;
                 }
@@ -46,7 +46,7 @@ $border-radius-welcome-button: 10px;
                     order: 1;
                 }
             }
-            @media screen and (max-width: 1200px) {
+            @media screen and (max-width: 767px) {
                 padding: 5.5% 0 7%;
             }
             .welcome__picture {
