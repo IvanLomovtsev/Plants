@@ -76,6 +76,10 @@ $border-radius-card: 20px;
                             margin-right: 10px;
                         }
                     }
+                    .button-active {
+                        color: variables.$color-secondary;
+                        background-color: variables.$color-orange;
+                    }
                     @media screen and (max-width: 1200px) and (min-width: 1001px) {
                         width: 60%;
                     }
