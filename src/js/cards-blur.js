@@ -10,8 +10,29 @@ gardenBtn.addEventListener('click', controlBlur.bind({button: gardenBtn, firstCa
 lawnBtn.addEventListener('click', controlBlur.bind({button: lawnBtn, firstCardBlur: gardenCard, secondCardBlur: plantingCard}));
 plantingBtn.addEventListener('click', controlBlur.bind({button: plantingBtn, firstCardBlur: gardenCard, secondCardBlur: lawnCard}));
 
+let queueButton = [];
+
+
 function controlBlur() {
-    (this.button).classList.toggle('button-active');
-    Array.from(this.firstCardBlur).forEach(card => card.classList.toggle('blur'));
-    Array.from(this.secondCardBlur).forEach(card => card.classList.toggle('blur'));
+    if (queueButton.indexOf(this.button) !== -1) {
+        (this.button).classList.remove('button-active');
+        queueButton.splice(queueButton.indexOf(this.button), 1);
+        return
+    }
+    if (queueButton.length < 2) {
+        queueButton.push(this.button);
+        (this.button).classList.add('button-active')
+    }
+    else {
+        queueButton.push(this.button);
+        (this.button).classList.toggle('button-active');
+        (queueButton.shift()).classList.toggle('button-active');
+    }
 }
+    
+
+    // console.log(queueButton);
+
+    // (this.button).classList.toggle('button-active');
+    // Array.from(this.firstCardBlur).forEach(card => card.classList.toggle('blur'));
+    // Array.from(this.secondCardBlur).forEach(card => card.classList.toggle('blur'));
