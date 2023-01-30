@@ -120,8 +120,10 @@ $border-radius-card: 20px;
                 .card {
                     margin: 0;
                     margin-top: $margin-top-card;
+                    position: relative;
                     width: 27%;
                     border: 1px solid $border-color-card;
+                    transition: 0.5s linear;
                     border-radius: $border-radius-card;
                     @media screen and (max-width: 1200px) and (min-width: 768px) {
                         width: 42%; 
@@ -173,9 +175,6 @@ $border-radius-card: 20px;
                         }
                     }
                 }
-                // .blur {
-                //     filter: blur(2px);
-                // }
             }
         }
     }
