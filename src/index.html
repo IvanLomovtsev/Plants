@@ -212,8 +212,22 @@
                 </div>
                 <h2 class="contacts-h2">Contact us</h2>
                 <div class="contacts-select">
-                    <p class="contacts-select-p">City</p>
-                    <div class="contacts-select-indicator"></div>
+                    <div class="select__toggle">
+                        <p class="contacts-select-p">City</p>
+                        <div class="contacts-select-indicator"></div>
+                    </div>
+                </div>
+                <div class="select">
+                    <div class="dropdown">
+                        <button class="dropdown__button">City</button>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__list-item" data-value="canandaigua">Canandaigua, NY</li>
+                            <li class="dropdown__list-item" data-value="NYC">New York City</li>
+                            <li class="dropdown__list-item" data-value="yonkers">Yonkers, NY</li>
+                            <li class="dropdown__list-item" data-value="sherill">Sherrill, NY</li>
+                        </ul>
+                        <input class="dropdown__input-hidden" type="text" name="select-city" value="">
+                    </div>
                 </div>
             </div>
         </section>
