@@ -16,7 +16,7 @@ $font-size-contacts-h2: 2.5rem;
 
 //select
 $margin-contacts-select: 95px;
-$width-contacts-select: 37%;
+$width-contacts-select: 450px;
 $padding-contacts-select: 12px;
 $font-size-contacts-select-p: 1.3rem;
 $padding-left: 22px;
@@ -43,14 +43,14 @@ $color-select-town-indicator: #AEA1A1;
         justify-content: space-between;
         align-items: flex-start;
         padding-top: $padding-top;
-        @media screen and (max-width: 1000px) {
+        @media screen and (max-width: 1250px) {
             padding-top: 4%;
             flex-direction: column;
             align-items: center;
             .contacts-h2 {
                 order: 1;
             }
-            .contacts-select {
+            .contacts__select {
                 order: 2;
             }
             .contacts-picture {
@@ -63,7 +63,7 @@ $color-select-town-indicator: #AEA1A1;
             height: $height-contact-picture;
             background-image: url("../images/contact_woman.png");
             background-size: cover;
-            @media screen and (max-width: 1000px) and (min-width: 768px) {
+            @media screen and (max-width: 1250px) and (min-width: 768px) {
                 margin-top: 23%;
                 width: 24vw;
                 height: 32.5vw;
@@ -83,10 +83,7 @@ $color-select-town-indicator: #AEA1A1;
             font-size: $font-size-contacts-h2;
             font-family: Inika;
             color: variables.$color-green;
-            @media screen and (max-width: 1150px) and (min-width: 1001px) {
-                width: 25%;
-            }
-            @media screen and (max-width: 1000px) {
+            @media screen and (max-width: 1250px) {
                 width: 100%;
                 padding-left: 0;
             }
@@ -94,82 +91,94 @@ $color-select-town-indicator: #AEA1A1;
                 font-size: calc(25px + (100vw / 767));
             }
         }
-        .contacts-select {
+        .contacts__select {
+            margin: 0;
             width: $width-contacts-select;
-            .select__toggle {
-                margin: $margin-contacts-select 0;
-                width: 100%;
-                background-color: #D6E7D2;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: $padding-contacts-select 0;
-                box-shadow: 0px $size-shadow $size-shadow $color-shadow;
-                @media screen and (max-width: 1000px) and (min-width: 768px) {
-                    width: 67.5%;
-                    margin: 15%;
-                }
-                @media screen and (max-width: 767px) {
-                    width: 90%;
-                    margin: 25% auto;
-                }
-                .contacts-select-p {
-                    margin: 0;
-                    font-size: $font-size-contacts-select-p;
-                    padding-left: $padding-left;
-                    @media screen and (max-width: 767px) {
-                        padding-left: 5.5%;
-                    }
-                }
-                .contacts-select-indicator {
-                    width: $select-town-indicator;
-                    height: $select-town-indicator;
-                    border-radius: $border-radius-select-town-indicator;
-                    margin-right: $margin-select-town-indicator;
-                    width: $size-select-town-indicator;
-                    height: $size-select-town-indicator;
-                    background-color: $color-select-town-indicator;
-                    background-image: url("../icons/arrow_contacts.svg");
-                    background-size: 40%;
-                    background-repeat: no-repeat;
-                    background-position: center;
-                    @media screen and (max-width: 767px) {
-                        margin-right: 6.5%;
-                    }
-                }
+            @media screen and (max-width: 767px) {
+                margin: auto;
+                width: 91%;
             }
-        }
-        .select {
             .dropdown {
                 position: relative;
                 .dropdown__button {
                     position: relative;
                     margin: $margin-contacts-select 0;
-                    width: 400px;
+                    width: 100%;
+                    height: 50px;
                     background-color: #D6E7D2;
                     display: flex;
                     justify-content: space-between;
                     align-items: center;
                     padding: $padding-contacts-select 0;
                     box-shadow: 0px $size-shadow $size-shadow $color-shadow;
+                    cursor: pointer;
+                    @media screen and (max-width: 1350px) and (min-width: 1251px) {
+                        margin-top: 5%;
+                    }
+                    @media screen and (max-width: 1250px) and (min-width: 768px) {
+                        margin-top: 23%;
+                    }
+                    @media screen and (max-width: 767px) {
+                        margin: 27% 0;
+                    }
+                    .dropdown__button-span {
+                        margin: 0;
+                        font-size: $font-size-contacts-select-p;
+                        padding-left: $padding-left;
+                        font-family: Inter;
+                        color: #717171;
+                        @media screen and (max-width: 767px) {
+                            padding-left: 5.5%;
+                        }
+                    }
+                    .dropdown__button-indicator {
+                        width: $select-town-indicator;
+                        height: $select-town-indicator;
+                        border-radius: $border-radius-select-town-indicator;
+                        margin-right: $margin-select-town-indicator;
+                        width: $size-select-town-indicator;
+                        height: $size-select-town-indicator;
+                        background-color: $color-select-town-indicator;
+                        background-image: url("../icons/arrow_contacts.svg");
+                        background-size: 40%;
+                        background-repeat: no-repeat;
+                        background-position: center;
+                        transition: 0.5s linear;
+                        @media screen and (max-width: 767px) {
+                            margin-right: 6.5%;
+                        }
+                    }
+                }
+                .dropdown__button-active {
+                    background-color: #C1E698;
+                    box-shadow: none;
+                    .dropdown__button-indicator {
+                        background-color: #AEA1A1;
+                        background-image: url("../icons/arrow_prices-active.svg");
+                    }
                 }
                 .dropdown__list {
                     display: none;
                     margin: 0;
                     padding: 0;
                     list-style-type: none;
-                    background: #e9e7e7;
+                    background: #DCE9D9;
                     overflow: hidden;
                     width: 100%;
                     position: absolute;
                     left: 0;
-                    top: 45px;
+                    top: 50px;
                     z-index: 1;
                     .dropdown__list-item {
-                        margin: 0;
+                        width: 85%;
+                        margin: 26px;
                         padding: 0;
+                        border-bottom: 1px solid #D9D9D9;
+                        color: #499A18;
+                        cursor: pointer;
                         &:hover {
-                            background: orange;
+                            color: #717171;
+                            border-bottom: 1px solid #717171;
                         }
                     }
                 }
@@ -177,7 +186,7 @@ $color-select-town-indicator: #AEA1A1;
                     display: block;
                 }
                 .dropdown__input-hidden {
-                    //display: none;
+                    display: none;
                 }
             }
         }

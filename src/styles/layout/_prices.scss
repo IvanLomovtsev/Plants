@@ -3,7 +3,7 @@
 
 //prices-choice
 $padding-prices-top: 42px;
-$padding-prices-bottom: 105px;
+$padding-prices-bottom: 110px;
 
 //choice
 $width-prices-choice: 45%;
@@ -232,7 +232,7 @@ $height-prices-help-picture: 175px;
                     }
                 }
                 .choice-rate:last-child {
-                    margin-bottom: 40px;
+                    margin-bottom: 35px;
                     @media screen and (max-width: 767px) {
                         margin-bottom: 12px;
                     }
