@@ -218,12 +218,41 @@
                             <div class="dropdown__button-indicator"></div>
                         </button>
                         <ul class="dropdown__list">
-                            <li class="dropdown__list-item" data-value="canandaigua">Canandaigua, NY</li>
-                            <li class="dropdown__list-item" data-value="NYC">New York City</li>
-                            <li class="dropdown__list-item" data-value="yonkers">Yonkers, NY</li>
-                            <li class="dropdown__list-item" data-value="sherill">Sherrill, NY</li>
+                            <li class="dropdown__list-item" 
+                                data-city="Canandaigua, NY" 
+                                data-phone="+1	585	393 0001" 
+                                data-adress="151 Charlotte Street">
+                            Canandaigua, NY</li>
+                            <li class="dropdown__list-item" 
+                                data-city="New York City" 
+                                data-phone="+1	212	456 0002" 
+                                data-adress="9 East 91st Street">
+                            New York City</li>
+                            <li class="dropdown__list-item" 
+                                data-city="Yonkers, NY" 
+                                data-phone="+1	914	678 0003" 
+                                data-adress="511 Warburton Ave">
+                            Yonkers, NY</li>
+                            <li class="dropdown__list-item" 
+                                data-city="Sherrill, NY" 
+                                data-phone="+1	315	908 0004" 
+                                data-adress="14 WEST Noyes BLVD">
+                            Sherrill, NY</li>
                         </ul>
-                        <input class="dropdown__input-hidden" type="text" name="select-city" value="">
+                        <div class="dropdown__card">
+                            <div class="dropdown__card-paragraph">
+                                <span class="dropdown__card-name">City: </span><span class="dropdown__card-value value-city"></span>
+                            </div>
+                            <div class="dropdown__card-paragraph">
+                                <span class="dropdown__card-name">Phone: </span><span class="dropdown__card-value value-phone"></span>
+                            </div>
+                            <div class="dropdown__card-paragraph">
+                                <span class="dropdown__card-name">Office adress: </span><span class="dropdown__card-value value-adress"></span>
+                            </div>
+                            <form class="dropdown__card-telephone" action="">
+                                <button class="dropdown__card-call">Call us</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
