@@ -22,13 +22,10 @@ $border-radius-button: 5px;
     padding: $padding-button 0;
     border: 2px solid variables.$color-orange;
     border-radius: $border-radius-button;
-    transition: 0.2s linear;
+    transition: 0.5s linear;
     cursor: pointer;
-    &:hover {
-        color: variables.$color-secondary;
-        background-color: variables.$color-orange;
-    }
-    @media screen and (max-width: 700px) {
-        
-    }
+    // &:hover {
+    //     color: variables.$color-secondary;
+    //     background-color: variables.$color-orange;
+    // }
 }

@@ -76,48 +76,48 @@
                         <h2 class="service-elements-h2">Service and our projects</h2>
                         <div class="controls">
                             <form class="controls__button">
-                                <button class="button">Gardens</button>
+                                <button type="button" class="button button-gardens">Gardens</button>
                             </form>
                             <form class="controls__button">
-                                <button class="button">Lawn</button>
+                                <button type="button" class="button button-lawn">Lawn</button>
                             </form>
                             <form class="controls__button">
-                                <button class="button">Planting</button>
+                                <button type="button" class="button button-planting">Planting</button>
                             </form>
                         </div>
                     </div>
                     <div class="service-elements__cards">
-                        <div class="card">
+                        <div class="card gardens">
                             <img class="card-img" src="./images/garden_care.png" alt="garden care">
                             <img class="card-img-mob" src="./images/garden_care_mob.png" alt="garden care">
                             <h3 class="card-h3">Garden care</h3>
                             <p class="card-p">Lorem Ipsum has been the industry</p>
                         </div>
-                        <div class="card">
+                        <div class="card planting">
                             <img class="card-img" src="./images/planting.png" alt="planting">
                             <img class="card-img-mob" src="./images/planting_mob.png" alt="planting">
                             <h3 class="card-h3">Planting</h3>
                             <p class="card-p">Lorem Ipsum has been the industry</p>
                         </div>
-                        <div class="card">
+                        <div class="card lawn">
                             <img class="card-img" src="./images/lawn_care.png" alt="lawn care">
                             <img class="card-img-mob" src="./images/lawn_care_mob.png" alt="lawn care">
                             <h3 class="card-h3">Lawn care</h3>
                             <p class="card-p">Lorem Ipsum has been the industry</p>
                         </div>
-                        <div class="card">
+                        <div class="card planting">
                             <img class="card-img" src="./images/planting_2.png" alt="planting">
                             <img class="card-img-mob" src="./images/planting_2_mob.png" alt="planting">
                             <h3 class="card-h3">Planting</h3>
                             <p class="card-p">Lorem Ipsum has been the industry</p>
                         </div>
-                        <div class="card">
+                        <div class="card gardens">
                             <img class="card-img" src="./images/garden_care2.png" alt="garden care">
                             <img class="card-img-mob" src="./images/garden_care2_mob.png" alt="garden care">
                             <h3 class="card-h3">Garden care</h3>
                             <p class="card-p">Lorem Ipsum has been the industry</p>
                         </div>
-                        <div class="card">
+                        <div class="card planting">
                             <img class="card-img" src="./images/planting_3.png" alt="planting">
                             <img class="card-img-mob" src="./images/planting_3_mob.png" alt="planting">
                             <h3 class="card-h3">Planting</h3>
@@ -133,27 +133,63 @@
                     <h2 class="prices-h2">Prices</h2>
                     <div class="choice">
                         <div class="choice-rate">
-                            <p class="choice-rate-p">
-                                Basics
-                            </p>
-                            <div class="choice-rate-indicator">
-                                
+                            <div class="accordion__button">
+                                <p class="choice-rate-p">
+                                    Basics
+                                </p>
+                                <div class="choice-rate-indicator">
+                                    
+                                </div>
+                            </div>
+                            <div class="accordion__content">
+                                <hr>
+                                <p class="content__description">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                <div class="content__price">
+                                    <span class="price-currency">$</span><span class="price-value">15</span><span class="price-unit"> / per hour</span>
+                                </div>
+                                <form class="content__button" action="#contacts">
+                                    <button class="button-order">Order</button>
+                                </form>
                             </div>
                         </div>
                         <div class="choice-rate">
-                            <p class="choice-rate-p">
-                                Standard
-                            </p>
-                            <div class="choice-rate-indicator">
-                                
+                            <div class="accordion__button">
+                                <p class="choice-rate-p">
+                                    Standard
+                                </p>
+                                <div class="choice-rate-indicator">
+                                    
+                                </div>
+                            </div>
+                            <div class="accordion__content">
+                                <hr>
+                                <p class="content__description">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                <div class="content__price">
+                                    <span class="price-currency">$</span><span class="price-value">25</span><span class="price-unit"> / per hour</span>
+                                </div>
+                                <form class="content__button" action="#contacts">
+                                    <button class="button-order">Order</button>
+                                </form>
                             </div>
                         </div>
                         <div class="choice-rate">
-                            <p class="choice-rate-p">
-                                Pro care
-                            </p>
-                            <div class="choice-rate-indicator">
-                                
+                            <div class="accordion__button">
+                                <p class="choice-rate-p">
+                                    Pro care
+                                </p>
+                                <div class="choice-rate-indicator">
+                                    
+                                </div>
+                            </div>
+                            <div class="accordion__content">
+                                <hr>
+                                <p class="content__description">Release of Letraset sheets containing Lorem Ipsum passages, and more recently</p>
+                                <div class="content__price">
+                                    <span class="price-currency">$</span><span class="price-value">35</span><span class="price-unit"> / per hour</span>
+                                </div>
+                                <form class="content__button" action="#contacts">
+                                    <button class="button-order">Order</button>
+                                </form>
                             </div>
                         </div>
                     </div>
@@ -172,12 +208,51 @@
         <section class="contacts" id="contacts">
             <div class="contacts-block containeer">
                 <div class="contacts-picture">
-    
                 </div>
                 <h2 class="contacts-h2">Contact us</h2>
-                <div class="contacts-select">
-                    <p class="contacts-select-p">City</p>
-                    <div class="contacts-select-indicator"></div>
+                <div class="contacts__select">
+                    <div class="dropdown">
+                        <button class="dropdown__button">
+                            <span class="dropdown__button-span">City</span>
+                            <div class="dropdown__button-indicator"></div>
+                        </button>
+                        <ul class="dropdown__list">
+                            <li class="dropdown__list-item" 
+                                data-city="Canandaigua, NY" 
+                                data-phone="+1	585	393 0001" 
+                                data-adress="151 Charlotte Street">
+                            Canandaigua, NY</li>
+                            <li class="dropdown__list-item" 
+                                data-city="New York City" 
+                                data-phone="+1	212	456 0002" 
+                                data-adress="9 East 91st Street">
+                            New York City</li>
+                            <li class="dropdown__list-item" 
+                                data-city="Yonkers, NY" 
+                                data-phone="+1	914	678 0003" 
+                                data-adress="511 Warburton Ave">
+                            Yonkers, NY</li>
+                            <li class="dropdown__list-item" 
+                                data-city="Sherrill, NY" 
+                                data-phone="+1	315	908 0004" 
+                                data-adress="14 WEST Noyes BLVD">
+                            Sherrill, NY</li>
+                        </ul>
+                        <div class="dropdown__card">
+                            <div class="dropdown__card-paragraph">
+                                <span class="dropdown__card-name">City: </span><span class="dropdown__card-value value-city"></span>
+                            </div>
+                            <div class="dropdown__card-paragraph">
+                                <span class="dropdown__card-name">Phone: </span><span class="dropdown__card-value value-phone"></span>
+                            </div>
+                            <div class="dropdown__card-paragraph">
+                                <span class="dropdown__card-name">Office adress: </span><span class="dropdown__card-value value-adress"></span>
+                            </div>
+                            <form class="dropdown__card-telephone" action="">
+                                <button class="dropdown__card-call">Call us</button>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
