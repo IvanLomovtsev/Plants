@@ -6,6 +6,7 @@ const gardenCard = document.getElementsByClassName("gardens");
 const lawnCard = document.getElementsByClassName("lawn");
 const plantingCard = document.getElementsByClassName("planting");
 
+//service selection processing
 gardenBtn.addEventListener('click', controlBlur.bind({
     button: gardenBtn, 
     cardUnBlur: gardenCard, 
@@ -28,6 +29,7 @@ plantingBtn.addEventListener('click', controlBlur.bind({
 let queueButton = [];
 let unBlur = [];
 
+//queuing of pressed buttons. Pressed buttons should be no more than two
 function controlBlur() {
     if (queueButton.indexOf(this.button) !== -1) {
         (this.button).classList.remove('button-active');
@@ -52,6 +54,7 @@ function controlBlur() {
     addBlur(unBlur)
 }
 
+//adding blur to inactive services
 function addBlur (unBlurCards) {
     let allCards = [gardenCard, lawnCard, plantingCard];
     if (unBlurCards.length === 0){

@@ -1,3 +1,4 @@
+//implementation of an accordion in price selection
 document.querySelectorAll(".accordion__button").forEach((el)=>{
     el.addEventListener('click', ()=>{
         let content = el.nextElementSibling;
@@ -18,7 +19,7 @@ document.querySelectorAll(".accordion__button").forEach((el)=>{
                 }
             })
             content.style.maxHeight = content.scrollHeight + 'px';
-            content.style.marginBottom = "0px";
+            content.style.marginBottom = "0";
             el.classList.add("accordion__button_active");
         }
     })

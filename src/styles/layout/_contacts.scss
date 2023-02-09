@@ -5,8 +5,9 @@
 $padding-top: 53px;
 
 //contacts-picture
-$width-contact-picture: 26.5vw;
-$height-contact-picture: 33vw;
+//$width-contact-picture: 26.5vw;
+$width-contact-picture: 32.5%;
+//$height-contact-picture: 34.2vw;
 
 //contacts-h2
 $width-contacts-h2: 20%;
@@ -60,16 +61,19 @@ $color-select-town-indicator: #AEA1A1;
         .contacts-picture {
             margin: 0;
             width: $width-contact-picture;
-            height: $height-contact-picture;
+            //height: $height-contact-picture;
+            padding: 20.3% 0;
             background-image: url("../images/contact_woman.png");
             background-size: cover;
             @media screen and (max-width: 1250px) and (min-width: 768px) {
                 margin-top: 20%;
+                padding: 0;
                 width: 24vw;
                 height: 32.5vw;
             }
             @media screen and (max-width: 767px) {
                 margin-top: 15%;
+                padding: 0;
                 width: 26vw;
                 height: 32.5vw;
             }
@@ -116,10 +120,10 @@ $color-select-town-indicator: #AEA1A1;
                         margin: 5% auto;
                     }
                     @media screen and (max-width: 1250px) and (min-width: 768px) {
-                        margin: 23% auto 10%;
+                        margin: 23% auto 14%;
                     }
                     @media screen and (max-width: 767px) {
-                        margin: 27% 0;
+                        margin: 27% 0 16%;
                     }
                     .dropdown__button-span {
                         margin: 0;
@@ -202,7 +206,7 @@ $color-select-town-indicator: #AEA1A1;
                             padding-top: 10px;
                             color: #000000;
                             width: 127px;
-                            @media screen and (max-width: 767px) {
+                            @media screen and (max-width: 450px) {
                                 width: 65px;
                             }
                         }
