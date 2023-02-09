@@ -112,12 +112,11 @@ $height-prices-help-picture: 175px;
                         background-color: $color-primary;
                         transition: 0.5s linear;
                         cursor: pointer;
-                        
                         @media screen and (max-width: 767px) {
                             width: 82%;
                             margin: 12px auto 0;
                         }
-                        .choice-rate-p {
+                        .accordion__button-p {
                             margin: 0;
                             color: $color-prices;
                             font-weight: 700;
@@ -132,7 +131,7 @@ $height-prices-help-picture: 175px;
                                 line-height: 20px;
                             }
                         }
-                        .choice-rate-indicator {
+                        .accordion__button-indicator {
                             border-radius: $border-radius-choice-rate-indicator;
                             margin: 0;
                             margin-right: $margin-choice-rate-indicator;
@@ -166,7 +165,8 @@ $height-prices-help-picture: 175px;
                         border-radius: 0 0 $border-radius-choice $border-radius-choice;
                         transition: 0.5s linear;
                         @media screen and (max-width: 767px) {
-                            width: 82%;   
+                            margin-top: -10px;
+                            width: 82%;
                         }
                         hr {
                             border: 0;
@@ -176,6 +176,9 @@ $height-prices-help-picture: 175px;
                             width: 68%;               
                             background-color:#AEA1A1;
                             height: 1px;
+                            @media screen and (max-width: 767px) {
+                                margin-top: 0;
+                            }
                         }
                         .content__description {
                             font-family: 'Inter';
@@ -210,6 +213,7 @@ $height-prices-help-picture: 175px;
                             line-height: 20px;
                         }
                         .button-order {
+                            display: block;
                             background: #FFFFFF;
                             border-radius: 10px;
                             width: 86px;
@@ -219,10 +223,11 @@ $height-prices-help-picture: 175px;
                             font-style: normal;
                             font-weight: 700;
                             font-size: 14px;
-                            line-height: 20px;
+                            line-height: 25px;
                             margin-top: 6px;
                             margin-bottom: 20px;
                             margin-left: 40px;
+                            text-align: center;
                             cursor: pointer;
                             &:hover {
                                 color: variables.$color-secondary;
