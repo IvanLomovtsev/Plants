@@ -8,13 +8,13 @@ const dropDownCardPhone = document.querySelector(".value-phone");
 const dropDownCardAdress = document.querySelector(".value-adress");
 const buttonCall = document.querySelector(".dropdown__card-telephone");
 
-//клик по кнопке. Открыть/закрыть select
+//button click. Open/close select
 dropDownButton.addEventListener('click', function () {
     dropDownList.classList.toggle('dropdown__list--visible')
     dropDownButton.classList.toggle('dropdown__button-active')
 })
 
-//Выбор элемента списка. Запомнить выбранное значение. Закрыть дропдаун
+//Selecting a list item. Remember the selected value, close dropdown
 dropDownListItems.forEach(function(listItem) {
     listItem.addEventListener('click', function() {
         dropDownButtonSpan.innerText = this.innerText;
@@ -30,7 +30,7 @@ dropDownListItems.forEach(function(listItem) {
     })
 })
 
-//клик снаружи дропдауна. Закрываем дропдаун
+//click outside the dropdown. Closing the dropdown
 document.addEventListener('click', function(e){
     if (!e.composedPath().includes(dropDownButton)) {
          dropDownList.classList.remove('dropdown__list--visible')
@@ -38,6 +38,8 @@ document.addEventListener('click', function(e){
     }
 
 })
+
+//closing the dropdown from the keyboard
 document.addEventListener('keydown', function(e){
     if (e.key === "Tab" || e.key === "Escape") {
         dropDownList.classList.remove('dropdown__list--visible')
