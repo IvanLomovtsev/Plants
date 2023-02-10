@@ -148,7 +148,7 @@ $height-prices-help-picture: 175px;
                         background-color: #D6E7D2;
                         border-radius: $border-radius-choice $border-radius-choice 0 0;
                         transition: 0.5s linear;
-                        .choice-rate-indicator {
+                        .accordion__button-indicator {
                             background-color: #AEA1A1;
                             background-image: url("../icons/arrow_prices-active.svg");
                         }
